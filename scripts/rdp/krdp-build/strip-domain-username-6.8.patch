@@ -1,0 +1,22 @@
+diff --git a/src/RdpConnection.cpp b/src/RdpConnection.cpp
+index a1ad7e1..0d79c92 100644
+--- a/src/RdpConnection.cpp
++++ b/src/RdpConnection.cpp
+@@ -681,7 +681,8 @@ bool RdpConnection::onPostConnect()
+     d->samFile.remove();
+ 
+     rdpSettings *settings = d->peer->context->settings;
+-    const QString username = QString::fromLatin1(freerdp_settings_get_string(settings, FreeRDP_Username));
++    // Windows clients send "DOMAIN\user" or ".\user"; only the user part matters (backport of upstream 095f6ea)
++    const QString username = QString::fromLatin1(freerdp_settings_get_string(settings, FreeRDP_Username)).section(QLatin1Char('\\'), -1);
+ 
+     if (d->server->usePAMAuthentication()) {
+         if (!freerdp_settings_set_bool(settings, FreeRDP_AutoLogonEnabled, true)) {
+@@ -696,6 +697,7 @@ bool RdpConnection::onPostConnect()
+                 return true;
+             }
+         }
++        qCWarning(KRDP) << "PAM authentication failed for user" << username << "(password empty:" << password.isEmpty() << "length:" << password.size() << ")";
+         const auto users = d->server->users();
+         for (auto user : users) {
+             if (user.password.isEmpty()) {

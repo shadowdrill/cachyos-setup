@@ -1,0 +1,26 @@
+# Local build of krdp 6.8.1 (Plasma/6.8 branch release commit) ahead of the CachyOS package.
+# Fixes: frozen/black screen with Windows clients (BUG 520260), mstsc DOMAIN\user login.
+pkgname=krdp
+pkgver=6.8.1
+pkgrel=1
+_commit=5813706fff108a40435be2a1c7f3c69f9665d0d0
+pkgdesc='Library and examples for creating an RDP server (6.8.1 pre-release build)'
+arch=(x86_64)
+url='https://kde.org/plasma-desktop/'
+license=(LGPL-2.0-or-later)
+depends=(freerdp glibc kcmutils kconfig kcoreaddons kcrash kguiaddons ki18n kirigami
+         kirigami-addons kpipewire kstatusnotifieritem libei libstdc++ libxkbcommon pam
+         qt6-base qt6-declarative qtkeychain-qt6 systemd-libs wayland)
+makedepends=(cmake extra-cmake-modules plasma-wayland-protocols git)
+groups=(plasma)
+source=("git+https://invent.kde.org/plasma/krdp.git#commit=$_commit")
+sha256sums=('SKIP')
+
+build() {
+  cmake -B build -S $pkgname -DBUILD_TESTING=OFF -DCMAKE_BUILD_TYPE=Release
+  cmake --build build
+}
+
+package() {
+  DESTDIR="$pkgdir" cmake --install build
+}

@@ -1,0 +1,21 @@
+--- a/src/RdpConnection.cpp
++++ b/src/RdpConnection.cpp
+@@ -534,7 +534,8 @@ bool RdpConnection::onPostConnect()
+         return false;
+     }
+ 
+-    const QString username = QString::fromLatin1(freerdp_settings_get_string(settings, FreeRDP_Username));
++    // Windows clients send "DOMAIN\user" or ".\user"; only the user part matters (backport of upstream 095f6ea)
++    const QString username = QString::fromLatin1(freerdp_settings_get_string(settings, FreeRDP_Username)).section(QLatin1Char('\\'), -1);
+     const QString password = QString::fromLatin1(freerdp_settings_get_string(settings, FreeRDP_Password));
+ 
+     if (d->server->usePAMAuthentication()) {
+@@ -556,6 +557,8 @@ bool RdpConnection::onPostConnect()
+         }
+     }
+ 
++    qCWarning(KRDP) << "Authentication failed for user" << username << "(password empty:" << password.isEmpty() << ")";
++
+     return false;
+ }
+ 

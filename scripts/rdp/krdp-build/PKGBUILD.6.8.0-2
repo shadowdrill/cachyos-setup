@@ -1,0 +1,30 @@
+# Local rebuild of krdp 6.8.0 with DOMAIN\user fix and PAM failure logging
+pkgname=krdp
+pkgver=6.8.0
+pkgrel=2
+pkgdesc='Library and examples for creating an RDP server (patched: DOMAIN\user + auth logging)'
+arch=(x86_64)
+url='https://kde.org/plasma-desktop/'
+license=(LGPL-2.0-or-later)
+depends=(freerdp glibc kcmutils kconfig kcoreaddons kcrash kguiaddons ki18n kirigami
+         kirigami-addons kpipewire kstatusnotifieritem libei libstdc++ libxkbcommon pam
+         qt6-base qt6-declarative qtkeychain-qt6 systemd-libs wayland)
+makedepends=(cmake extra-cmake-modules plasma-wayland-protocols git)
+groups=(plasma)
+source=("git+https://invent.kde.org/plasma/krdp.git#tag=v$pkgver"
+        strip-domain-username-6.8.patch)
+sha256sums=('SKIP' 'SKIP')
+
+prepare() {
+  cd $pkgname
+  git apply ../strip-domain-username-6.8.patch
+}
+
+build() {
+  cmake -B build -S $pkgname -DBUILD_TESTING=OFF -DCMAKE_BUILD_TYPE=Release
+  cmake --build build
+}
+
+package() {
+  DESTDIR="$pkgdir" cmake --install build
+}

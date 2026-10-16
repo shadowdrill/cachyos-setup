@@ -1,0 +1,37 @@
+From 573e40a91fec497f6f4ca17c306f3cc8d70aed05 Mon Sep 17 00:00:00 2001
+From: Ben Marshall <ceylon@leavesoftea.net>
+Date: Thu, 1 Oct 2026 23:07:35 -0500
+Subject: [PATCH] Fix authentication with FreeRDP 3.32
+
+FreeRDP 3.32 enables extended security by default. This causes
+PROTOCOL_HYBRID_EX to be selected when KRDP uses PAM authentication,
+bypassing KRDP's intended TLS/PAM authentication path.
+
+Disable extended security for PAM authentication so that KRDP's
+configured TLS security mode is used, while leaving extended security
+enabled for the SAM-backed NLA path.
+
+BUG: 526514
+(cherry picked from commit 4eb3dff7733eddad84ea71da510cb77f5b4a3ae2)
+
+Backport note: Plasma/6.7 has no SAM-backed NLA path (TLS + PAM only),
+so ExtSecurity is simply disabled alongside NlaSecurity.
+---
+ src/RdpConnection.cpp | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/src/RdpConnection.cpp b/src/RdpConnection.cpp
+index 797d10b..f47ae64 100644
+--- a/src/RdpConnection.cpp
++++ b/src/RdpConnection.cpp
+@@ -356,6 +356,7 @@ void RdpConnection::initialize()
+     freerdp_settings_set_bool(settings, FreeRDP_RdpSecurity, false);
+     freerdp_settings_set_bool(settings, FreeRDP_TlsSecurity, true);
+     freerdp_settings_set_bool(settings, FreeRDP_NlaSecurity, false);
++    freerdp_settings_set_bool(settings, FreeRDP_ExtSecurity, false);
+ 
+     freerdp_settings_set_uint32(settings, FreeRDP_OsMajorType, OSMAJORTYPE_UNIX);
+     // PSEUDO_XSERVER is apparently required for things to work properly.
+-- 
+2.56.0
+

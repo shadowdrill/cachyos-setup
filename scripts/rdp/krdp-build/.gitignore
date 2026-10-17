@@ -1,4 +1,5 @@
 src/
 pkg/
+krdp/                # bare mirror of upstream, created by makepkg
 *.pkg.tar.zst
 makepkg.log

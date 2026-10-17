@@ -292,11 +292,18 @@ The server hits a use-after-free in `EnterCriticalSection` while allocating a ne
 
 **Why it only happens on Mac:** `freerdp_peer_context_new_ex` allocates and immediately frees a context during `RdpConnection::initialize()`. mstsc happens to be just slow enough (or sends a different first PDU) that the timing is benign; Mac MRD is fast enough to hit a race in the TLS setup path. **Windows clients (mstsc) are unaffected** — they continue to work fine.
 
-**Root cause and fix:** krdp 6.8.1 always sets `TlsSecurity = true` regardless of whether the connection actually uses PAM. The cleanup path inside `freerdp_peer_context_new_ex` has a stale-pointer bug that surfaces under the TLS-with-PAM negotiation when the client races the server. Upstream fix: krdp commit **`6d453c8`** on `Plasma/6.8` (David Edmundson, 2026-10-16), *"Drop TLS security for non-pam authentication"*. It changes `TlsSecurity` to follow `usePamAuthentication` so non-PAM clients take a different path, and clears the immediate Mac crash. The commit is **after** the 6.8.1 release tag, so the CachyOS 6.8.0 / 6.8.1 packages do not have it.
+**Root cause and fix (2026-10-17, krdp 6.8.1-3):** krdp 6.8.1 actually needs **two** post-release commits on top of the 6.8.1 tag, not one:
 
-**Recovery:**
+1. **`6d453c8`** on `Plasma/6.8` (David Edmundson, 2026-10-16), *"Drop TLS security for non-pam authentication"* — gates `FreeRDP_TlsSecurity` on `usePamAuthentication`.
+2. **`4eb3dff`** on `krdp master` (Ben Marshall, 2026-10-01), *"Fix authentication with FreeRDP 3.32"* — gates `FreeRDP_ExtSecurity` on `!usePamAuthentication`. This commit has **not** been cherry-picked to `Plasma/6.8` yet (as of 2026-10-17), so the CachyOS packages and a 6d453c8-only build both still have the bug.
 
-1. Build krdp 6.8.1-2 from `scripts/rdp/krdp-build/PKGBUILD` (already updated; commit `6d453c8`, pkgrel `2`):
+With only 6d453c8 the Mac client still triggers the same SIGSEGV in `freerdp_peer_context_new_ex` → `freerdp_peer_context_free` because freerdp 3.32 enables extended security by default and selects `PROTOCOL_HYBRID_EX`, which krdp's `TlsSecurity=false` path then races against. Setting `ExtSecurity = !usePamAuthentication` (i.e. `true` for the default non-PAM path) makes the negotiation match what the Mac client expects, and the use-after-free in `EnterCriticalSection` stops firing.
+
+Upstream bug: <https://bugs.kde.org/show_bug.cgi?id=526514>
+
+**Recovery (krdp 6.8.1-3):**
+
+1. Build krdp 6.8.1-3 from `scripts/rdp/krdp-build/PKGBUILD` (commit `6d453c8` + `extsecurity-freerdp-3.32.patch` cherry-pick of `4eb3dff`, pkgrel `3`):
    ```bash
    cd scripts/rdp/krdp-build
    rm -rf src pkg build *.pkg.tar.zst
@@ -304,23 +311,23 @@ The server hits a use-after-free in `EnterCriticalSection` while allocating a ne
    ```
 2. Install it from a **real interactive terminal** (Konsole, gnome-terminal, or a TTY), because `sudo` will prompt for the password and the prompt must reach stdin:
    ```bash
-   sudo pacman -U krdp-6.8.1-2-x86_64.pkg.tar.zst
-   pacman -Q krdp                   # must show 6.8.1-2
+   sudo pacman -U krdp-6.8.1-3-x86_64.pkg.tar.zst
+   pacman -Q krdp                   # must show 6.8.1-3
    systemctl --user restart app-org.kde.krdpserver.service
    ```
-3. Verify the binary now contains the fix:
+3. Verify the binary now contains the fix (the patched `RdpConnection::initialize` calls `freerdp_settings_set_bool` **11** times — the extra call is the new `ExtSecurity` line):
    ```bash
-   strings /usr/lib/libKRdp.so.6 | grep -E 'TlsSecurity'
-   # Should still show 'TlsSecurity' (the symbol is in FreeRDP, not krdp)
-   objdump -d /usr/lib/libKRdp.so.6 | grep -A1 'usePamAuthentication' | head -10
-   # The patched code references usePamAuthentication right after setting RdpSecurity=false
+   objdump -d /usr/lib/libKRdp.so.6 | awk '/<.*RdpConnection.*initialize.*>:/{f=1} f; /^$/{if(f)exit}' | grep -c freerdp_settings_set_bool
+   # 11 on 6.8.1-3, 10 on 6.8.1-1 / 6.8.1-2
    ```
 4. Retry the Mac MRD connection. The first attempt should produce the same `pam_unix(login:auth): authentication failure; user=hs` line as a Windows attempt would (i.e., the server now reaches auth), and on a successful password the stream starts.
 
+**Why the package is `6.8.1-3` instead of `6.8.1-1.1`:** the local `6.8.1-2` was the *first* attempt at this fix and turned out to be insufficient. Bumping to `-3` makes `vercmp` beat any future CachyOS `6.8.1-1.1` so our build doesn't get downgraded by `pacman -Syu` until CachyOS catches up.
+
 **If the build/install can't happen right now** (e.g. user is remote-only and locked out of the box), the only working options are:
 
-- Use Windows mstsc from a Windows machine (krdp 6.8.1-1 still works fine for that).
-- Wait for CachyOS to ship krdp 6.8.1-1.1 or 6.8.2 with `6d453c8` backported — then `pacman -Syu` will pick it up.
+- Use Windows mstsc from a Windows machine (krdp 6.8.1-3 still works fine for that).
+- Wait for CachyOS to ship krdp 6.8.1-1.1 or 6.8.2 with both `6d453c8` **and** `4eb3dff` backported — then `pacman -Syu` will pick it up.
 - Roll back to krdp 6.7.5-3 (the pre-Plasma-6.8 patched build) if you can downgrade Plasma. Loses 6.8 features.
 
 ### 3.9 Not problems, but expected log noise

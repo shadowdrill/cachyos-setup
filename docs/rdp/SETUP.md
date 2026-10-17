@@ -12,7 +12,7 @@ Windows Remote Desktop Connection logs in as `hs` with the normal Linux password
 | Server | KRDP (`krdpserver`), user unit `app-org.kde.krdpserver.service` |
 | Address / port | `192.168.0.101:3389` (TCP) |
 | Auth mode | System user via PAM (`SystemUserEnabled=true`), TLS transport, no NLA |
-| krdp package | `6.8.1-1`, local build of KDE's 6.8.1 release commit (ahead of CachyOS) |
+| krdp package | `6.8.1-3`, local build of KDE's 6.8.1 release commit + 6d453c8 + 4eb3dff (ahead of CachyOS) |
 | freerdp | `3.32.2-1.1` (repo) |
 | Plasma | 6.8.0 |
 
@@ -37,9 +37,9 @@ Fix: built **krdp 6.8.1** from the Plasma/6.8 release commit `5813706` (tagged u
 
 | # | Problem | Fix |
 |---|---|---|
-| 6 | **krdp crashes with SIGSEGV the moment a Mac MRD client connects.** The Mac sees a generic "We couldn't connect" error; on the box, `journalctl` shows `app-org.kde.krdpserver.service: Main process exited, code=dumped, status=11/SEGV` and a coredump in `freerdp_peer_context_new_ex → freerdp_peer_context_free` (during `RdpConnection::initialize()`). **Windows mstsc is unaffected.** | krdp commit **`6d453c8`** on `Plasma/6.8` (David Edmundson, 2026-10-16, *after* the 6.8.1 release), *"Drop TLS security for non-pam authentication"*. `TlsSecurity` is now gated on `usePamAuthentication` so non-PAM clients take a path that doesn't trigger the use-after-free. |
+| 6 | **krdp crashes with SIGSEGV the moment a Mac MRD client connects.** The Mac sees a generic "We couldn't connect" error; on the box, `journalctl` shows `app-org.kde.krdpserver.service: Main process exited, code=dumped, status=11/SEGV` and a coredump in `freerdp_peer_context_new_ex → freerdp_peer_context_free` (during `RdpConnection::initialize()`). **Windows mstsc is unaffected.** | krdp commit **`6d453c8`** on `Plasma/6.8` (David Edmundson, 2026-10-16, *after* the 6.8.1 release), *"Drop TLS security for non-pam authentication"*. `TlsSecurity` is now gated on `usePamAuthentication` so non-PAM clients take a path that doesn't trigger the use-after-free. **Not enough on its own** — also needed: master commit **`4eb3dff`** (Ben Marshall, 2026-10-01, *"Fix authentication with FreeRDP 3.32"*) which gates `FreeRDP_ExtSecurity` on `!usePamAuthentication`. Without that, freerdp 3.32's default ext security forces `PROTOCOL_HYBRID_EX` and the same use-after-free still fires. |
 
-Build: updated `scripts/rdp/krdp-build/PKGBUILD` to commit `6d453c8`, pkgrel `2` → `krdp 6.8.1-2`. Install: `sudo pacman -U krdp-6.8.1-2-x86_64.pkg.tar.zst` then `systemctl --user restart app-org.kde.krdpserver.service`. The CachyOS 6.8.1-1.1 (or 6.8.2) package will replace it once it ships upstream.
+Build: updated `scripts/rdp/krdp-build/PKGBUILD` to commit `6d453c8` **+ patch** `extsecurity-freerdp-3.32.patch` (cherry-pick of `4eb3dff`), pkgrel `3` → `krdp 6.8.1-3`. Install: `sudo pacman -U krdp-6.8.1-3-x86_64.pkg.tar.zst` then `systemctl --user restart app-org.kde.krdpserver.service`. The CachyOS 6.8.1-1.1 (or 6.8.2) package will replace it once both commits are upstream on `Plasma/6.8`.
 
 Full diagnosis and recovery recipe: see `RDP-HANDOFF.md` §3.8.
 

@@ -219,15 +219,22 @@ Other contributing factors seen on Mac:
 
 **Fix (do all four steps in order):**
 
-1. **Clear the cached password on the Mac.** Easiest: in MRD, right-click the connection → **Edit** → **User Account** → select **"Ask me every time"** → save. (If "Ask me every time" is greyed out, first switch to "Add user account" with a dummy, save, then re-edit and switch back.)
-2. **Reset the CachyOS-side lockout** so you're not fighting `pam_faillock`. From the Mac, over SSH, run:
+1. **Verify the password first with SSH.** This is the fastest disambiguation. From the Mac, in Terminal.app, run:
+   ```bash
+   ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no hs@192.168.0.101
+   ```
+   - If it logs you in → the password is right; the Mac MRD problem is purely a Keychain/cache issue. Continue to step 2.
+   - If it says `Permission denied (password)` → the password is wrong. **Stop and fix that first** — change it from a local terminal on the box (`passwd`) and remember the new one. RDP will not work until the password is right. Skip to step 4 if you also need to confirm a fresh password works.
+
+2. **Clear the cached password on the Mac.** Easiest: in MRD, right-click the connection → **Edit** → **User Account** → select **"Ask me every time"** → save. (If "Ask me every time" is greyed out, first switch to "Add user account" with a dummy, save, then re-edit and switch back.)
+3. **Reset the CachyOS-side lockout** so you're not fighting `pam_faillock`. From the Mac, over SSH, run:
    ```bash
    ssh hs@<cachyos-host>
    sudo faillock --user hs --reset
    ```
    If you can't SSH either (also locked out), log in physically at the box, or wait 10–15 minutes for the lock window to clear.
-3. **Reconnect from MRD.** It will now prompt for username and password. Type the **Linux** password (not your Mac user password, not a Microsoft/Windows password). Make sure the keyboard layout on the Mac is what the CachyOS box expects — try a US layout if your normal one is UK, or vice versa, until the password works. Tick "Remember this password in your keychain" only after you've confirmed it works.
-4. **Verify on the server:**
+4. **Reconnect from MRD.** It will now prompt for username and password. Type the **Linux** password (not your Mac user password, not a Microsoft/Windows password). Make sure the keyboard layout on the Mac is what the CachyOS box expects — try a US layout if your normal one is UK, or vice versa, until the password works. Tick "Remember this password in your keychain" only after you've confirmed it works.
+5. **Verify on the server:**
    ```bash
    journalctl --user -u app-org.kde.krdpserver.service -f
    ```
@@ -239,6 +246,25 @@ Other contributing factors seen on Mac:
    Hardware encoding is not supported on this device.                    # harmless, falls back to x264
    ```
    You should **not** see `pam_unix(login:auth): authentication failure`.
+
+**If step 1 said the password is correct but step 4 still fails** (server keeps printing `authentication failure; user=hs`):
+
+The Mac MRD build is sending a password that differs from what the Linux box has, even when you typed "the same thing". Suspect one of these, in order:
+
+- **Keyboard layout drift on the Mac.** The Mac's "Input Source" in System Settings → Keyboard may be different from what you used when you set the password. UK vs US swaps `@`, `"`, `#`, `\`. The password *typed* on the Mac and the password *typed* on the box at creation time are not the same string.
+- **A non-ASCII character in the password** (see §5.2). KRDP reads the RDP password with `QString::fromLatin1`, so anything outside Latin-1 (`€`, `£`, em-dash, etc.) is mangled into a different byte sequence and PAM rejects it. Use `passwd` on the box to set a new ASCII-only password and try again.
+- **Stale saved credential despite clearing the UI.** Some MRD builds keep the cached password in a *separate* Keychain item (e.g. an "internet password" entry rather than a "generic password" entry). Open **Keychain Access** → search for the box's IP → delete *all* matches. Quit MRD. Reopen.
+
+**Definitive test** for "is MRD sending the wrong bytes, or is PAM getting good bytes but the hash differs?":
+
+```bash
+# On the CachyOS box, run this in a terminal as root (or via sudo).
+# It traces FreeRDP's auth exchange. Trigger a Mac MRD attempt within 30 s.
+WLOG_FILTER='com.winpr.sspi*=TRACE:com.freerdp.core.auth=TRACE:com.freerdp.core.ntlm=TRACE' \
+    journalctl --user -u app-org.kde.krdpserver.service -f
+```
+
+Look for the line that prints the username and password length received from the client. If the length matches what you typed, the bytes reached KRDP intact and the problem is upstream of PAM (e.g. local vs. cached password mismatch). If the length differs, MRD is mangling the bytes (probably a non-ASCII character or a known MRD/FreeRDP quirk).
 
 **Mac client checklist** (do once per Mac):
 

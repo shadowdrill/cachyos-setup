@@ -1,0 +1,28 @@
+Cherry-pick of upstream master commit 4eb3dff "Fix authentication with
+FreeRDP 3.32" (Ben Marshall, 2026-10-01) onto Plasma/6.8, where it has
+not landed yet. Without it, freerdp 3.32's default extended security
+causes RdpConnection::initialize() to crash on connections from clients
+that do not negotiate PROTOCOL_HYBRID_EX cleanly (e.g. Microsoft Remote
+Desktop on macOS, which trips a use-after-free in
+freerdp_peer_context_new_ex -> freerdp_peer_context_free and the
+SIGSEGV in EnterCriticalSection observed in /var/lib/systemd/coredump).
+
+After this patch (combined with the already-cherry-picked 6d453c8 /
+d6b12bf), the non-PAM path uses NLA + extended security, the PAM path
+uses TLS only. Matches the freerdp 3.32 expectations and what master
+has been running for a few weeks.
+
+Upstream bug: https://bugs.kde.org/show_bug.cgi?id=526514
+---
+diff --git a/src/RdpConnection.cpp b/src/RdpConnection.cpp
+--- a/src/RdpConnection.cpp
++++ b/src/RdpConnection.cpp
+@@ -450,7 +450,7 @@ void RdpConnection::initialize()
+     freerdp_settings_set_bool(settings, FreeRDP_RdpSecurity, false);
+     freerdp_settings_set_bool(settings, FreeRDP_TlsSecurity, usePamAuthentication);
+     freerdp_settings_set_bool(settings, FreeRDP_NlaSecurity, !usePamAuthentication);
+-    freerdp_settings_set_bool(settings, FreeRDP_ExtSecurity, false);
++    freerdp_settings_set_bool(settings, FreeRDP_ExtSecurity, !usePamAuthentication);
+ 
+     freerdp_settings_set_uint32(settings, FreeRDP_OsMajorType, OSMAJORTYPE_UNIX);
+     // PSEUDO_XSERVER is apparently required for things to work properly.

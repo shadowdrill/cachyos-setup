@@ -6,7 +6,7 @@
 # macOS. See docs/rdp/RDP-HANDOFF.md §3.8.
 pkgname=krdp
 pkgver=6.8.1
-pkgrel=2
+pkgrel=3
 _commit=6d453c86d25c4a0b4acce70fb12499211201fe48   # Plasma/6.8 tip = 6.8.1 + 6d453c8
 pkgdesc='Library and examples for creating an RDP server (6.8.1 + TLS fix)'
 arch=(x86_64)
@@ -17,10 +17,13 @@ depends=(freerdp glibc kcmutils kconfig kcoreaddons kcrash kguiaddons ki18n kiri
          qt6-base qt6-declarative qtkeychain-qt6 systemd-libs wayland)
 makedepends=(cmake extra-cmake-modules plasma-wayland-protocols git)
 groups=(plasma)
-source=("git+https://invent.kde.org/plasma/krdp.git#commit=$_commit")
-sha256sums=('SKIP')
+source=("git+https://invent.kde.org/plasma/krdp.git#commit=$_commit"
+        "extsecurity-freerdp-3.32.patch")
+sha256sums=('SKIP'
+            'SKIP')
 
 build() {
+  patch -p1 -d $pkgname -i ../extsecurity-freerdp-3.32.patch
   cmake -B build -S $pkgname -DBUILD_TESTING=OFF -DCMAKE_BUILD_TYPE=Release
   cmake --build build
 }

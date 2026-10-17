@@ -1,10 +1,14 @@
 # Local build of krdp 6.8.1 (Plasma/6.8 branch release commit) ahead of the CachyOS package.
 # Fixes: frozen/black screen with Windows clients (BUG 520260), mstsc DOMAIN\user login.
+# Plus 6d453c8 "Drop TLS security for non-pam authentication" (post-6.8.1): fixes
+# SIGSEGV in freerdp_peer_context_new_ex -> freerdp_peer_context_free during
+# RdpConnection::initialize() on connections from Microsoft Remote Desktop on
+# macOS. See docs/rdp/RDP-HANDOFF.md §3.8.
 pkgname=krdp
 pkgver=6.8.1
-pkgrel=1
-_commit=5813706fff108a40435be2a1c7f3c69f9665d0d0
-pkgdesc='Library and examples for creating an RDP server (6.8.1 pre-release build)'
+pkgrel=2
+_commit=6d453c86d25c4a0b4acce70fb12499211201fe48   # Plasma/6.8 tip = 6.8.1 + 6d453c8
+pkgdesc='Library and examples for creating an RDP server (6.8.1 + TLS fix)'
 arch=(x86_64)
 url='https://kde.org/plasma-desktop/'
 license=(LGPL-2.0-or-later)

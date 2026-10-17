@@ -266,6 +266,65 @@ WLOG_FILTER='com.winpr.sspi*=TRACE:com.freerdp.core.auth=TRACE:com.freerdp.core.
 
 Look for the line that prints the username and password length received from the client. If the length matches what you typed, the bytes reached KRDP intact and the problem is upstream of PAM (e.g. local vs. cached password mismatch). If the length differs, MRD is mangling the bytes (probably a non-ASCII character or a known MRD/FreeRDP quirk).
 
+### 3.8 Mac crashes krdp on every connection (2026-10-17, krdp 6.8.1)
+
+**Symptom:** the krdp service dies with SIGSEGV the moment a Mac client connects. The user sees a generic "We couldn't connect" in Microsoft Remote Desktop. `journalctl --user -u app-org.kde.krdpserver.service` shows:
+
+```
+systemd-coredump: Process <pid> (krdpserver) of user 1000 dumped core.
+app-org.kde.krdpserver.service: Main process exited, code=dumped, status=11/SEGV
+app-org.kde.krdpserver.service: Scheduled restart job, restart counter is at N.
+```
+
+`coredumpctl info krdpserver` (or the coredump appended to the journal) shows the crash in the server's own init path, **before** any auth exchange:
+
+```
+#0  InterlockedIncrement        (libwinpr3.so.3)
+#1  EnterCriticalSection        (libwinpr3.so.3)
+#2  <freerdp critical section>  (libfreerdp3.so.3)
+#3  <krdp cleanup>              (libKRdp.so.6)
+#4  freerdp_peer_context_free   (libfreerdp3.so.3)
+#5  freerdp_peer_context_new_ex (libfreerdp3.so.3)
+#6  KRdp::RdpConnection::initialize()  (libKRdp.so.6)
+```
+
+The server hits a use-after-free in `EnterCriticalSection` while allocating a new peer context, dies, systemd restarts it, and the next connection crashes it again.
+
+**Why it only happens on Mac:** `freerdp_peer_context_new_ex` allocates and immediately frees a context during `RdpConnection::initialize()`. mstsc happens to be just slow enough (or sends a different first PDU) that the timing is benign; Mac MRD is fast enough to hit a race in the TLS setup path. **Windows clients (mstsc) are unaffected** — they continue to work fine.
+
+**Root cause and fix:** krdp 6.8.1 always sets `TlsSecurity = true` regardless of whether the connection actually uses PAM. The cleanup path inside `freerdp_peer_context_new_ex` has a stale-pointer bug that surfaces under the TLS-with-PAM negotiation when the client races the server. Upstream fix: krdp commit **`6d453c8`** on `Plasma/6.8` (David Edmundson, 2026-10-16), *"Drop TLS security for non-pam authentication"*. It changes `TlsSecurity` to follow `usePamAuthentication` so non-PAM clients take a different path, and clears the immediate Mac crash. The commit is **after** the 6.8.1 release tag, so the CachyOS 6.8.0 / 6.8.1 packages do not have it.
+
+**Recovery:**
+
+1. Build krdp 6.8.1-2 from `scripts/rdp/krdp-build/PKGBUILD` (already updated; commit `6d453c8`, pkgrel `2`):
+   ```bash
+   cd scripts/rdp/krdp-build
+   rm -rf src pkg build *.pkg.tar.zst
+   makepkg -f
+   ```
+2. Install it from a **real interactive terminal** (Konsole, gnome-terminal, or a TTY), because `sudo` will prompt for the password and the prompt must reach stdin:
+   ```bash
+   sudo pacman -U krdp-6.8.1-2-x86_64.pkg.tar.zst
+   pacman -Q krdp                   # must show 6.8.1-2
+   systemctl --user restart app-org.kde.krdpserver.service
+   ```
+3. Verify the binary now contains the fix:
+   ```bash
+   strings /usr/lib/libKRdp.so.6 | grep -E 'TlsSecurity'
+   # Should still show 'TlsSecurity' (the symbol is in FreeRDP, not krdp)
+   objdump -d /usr/lib/libKRdp.so.6 | grep -A1 'usePamAuthentication' | head -10
+   # The patched code references usePamAuthentication right after setting RdpSecurity=false
+   ```
+4. Retry the Mac MRD connection. The first attempt should produce the same `pam_unix(login:auth): authentication failure; user=hs` line as a Windows attempt would (i.e., the server now reaches auth), and on a successful password the stream starts.
+
+**If the build/install can't happen right now** (e.g. user is remote-only and locked out of the box), the only working options are:
+
+- Use Windows mstsc from a Windows machine (krdp 6.8.1-1 still works fine for that).
+- Wait for CachyOS to ship krdp 6.8.1-1.1 or 6.8.2 with `6d453c8` backported — then `pacman -Syu` will pick it up.
+- Roll back to krdp 6.7.5-3 (the pre-Plasma-6.8 patched build) if you can downgrade Plasma. Loses 6.8 features.
+
+### 3.9 Not problems, but expected log noise
+
 **Mac client checklist** (do once per Mac):
 
 - [ ] MRD entry points to the CachyOS box by IP, not hostname (avoids mDNS surprises on locked-down networks)

@@ -33,6 +33,16 @@ Windows Remote Desktop Connection logs in as `hs` with the normal Linux password
 
 Fix: built **krdp 6.8.1** from the Plasma/6.8 release commit `5813706` (tagged upstream 16 Oct 2026, not yet in CachyOS). It includes the frame-ack fix and the mstsc `DOMAIN\user` fix, so no local patches are needed. `vercmp`: the CachyOS `6.8.1-1.1` package will replace this local `6.8.1-1` automatically when it arrives.
 
+## 17 Oct 2026: krdp 6.8.1 + Mac MRD crash
+
+| # | Problem | Fix |
+|---|---|---|
+| 6 | **krdp crashes with SIGSEGV the moment a Mac MRD client connects.** The Mac sees a generic "We couldn't connect" error; on the box, `journalctl` shows `app-org.kde.krdpserver.service: Main process exited, code=dumped, status=11/SEGV` and a coredump in `freerdp_peer_context_new_ex → freerdp_peer_context_free` (during `RdpConnection::initialize()`). **Windows mstsc is unaffected.** | krdp commit **`6d453c8`** on `Plasma/6.8` (David Edmundson, 2026-10-16, *after* the 6.8.1 release), *"Drop TLS security for non-pam authentication"*. `TlsSecurity` is now gated on `usePamAuthentication` so non-PAM clients take a path that doesn't trigger the use-after-free. |
+
+Build: updated `scripts/rdp/krdp-build/PKGBUILD` to commit `6d453c8`, pkgrel `2` → `krdp 6.8.1-2`. Install: `sudo pacman -U krdp-6.8.1-2-x86_64.pkg.tar.zst` then `systemctl --user restart app-org.kde.krdpserver.service`. The CachyOS 6.8.1-1.1 (or 6.8.2) package will replace it once it ships upstream.
+
+Full diagnosis and recovery recipe: see `RDP-HANDOFF.md` §3.8.
+
 Diagnosis tips that worked:
 
 - Frames flowing? Measure server CPU: `P=$(systemctl --user show -p MainPID --value app-org.kde.krdpserver.service); awk '{print $14+$15}' /proc/$P/stat` twice, 3 s apart. A delta of 0 while connected means a stalled stream.

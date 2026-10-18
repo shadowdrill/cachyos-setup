@@ -40,7 +40,7 @@ Or, if you have the passkey already in a file, the one-shot is:
 
 | Hostname | IP (LAN) | GPU | Status | First WU | Notes |
 |---|---|---|---|---|---|
-| cachyos-taichi | 192.168.0.101 | RTX 3090 Ti (24 GB) | not yet installed | — | 9700X 8c/16t, this box |
+| cachyos-taichi | 192.168.0.101 | RTX 3090 Ti (24 GB) | active, team 223518, user `cachyos-taichi-folding` | pending — server handshake started | 9700X 8c/16t, this box; `fah-client` PID 20589 |
 | _next_ | — | — | — | — | add rows as boxes are folded in |
 
 ## Change log

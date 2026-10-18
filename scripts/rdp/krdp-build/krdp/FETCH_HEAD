@@ -1,0 +1,634 @@
+a99241f03a232eac173e7c9055f4a3d783117d5b	not-for-merge	'refs/backups/branch-pam-1750949606' of https://invent.kde.org/plasma/krdp
+ccb8d27963779a4a1a155f00a2aab4b2520cec41	not-for-merge	'refs/backups/tag-v6.6.6-1783427459' of https://invent.kde.org/plasma/krdp
+6491096f365404ffd02552b755ce94a2cca94bb5	not-for-merge	'refs/backups/work-branch-work/add_ECMDeprecationSettings-1734377915' of https://invent.kde.org/plasma/krdp
+10c9ea0c823c22101f8c16da2fb53e552eb20d78	not-for-merge	'refs/backups/work-branch-work/add_ECMDeprecationSettings-1734414444' of https://invent.kde.org/plasma/krdp
+1c5b790543fb5993523d2ac1e91c9428701d90c5	not-for-merge	'refs/backups/work-branch-work/add_ECMDeprecationSettings-1734673257' of https://invent.kde.org/plasma/krdp
+04e86b933587ca9ccc97fd63f4b04b808b8707e1	not-for-merge	'refs/backups/work-branch-work/add_moc-1698693206' of https://invent.kde.org/plasma/krdp
+20227c9b8182ea1cfd36745e27bcc2b07f3d8abc	not-for-merge	'refs/backups/work-branch-work/add_moc-1698693342' of https://invent.kde.org/plasma/krdp
+86498073e9ad5de63fcf547d59b5159035ee9556	not-for-merge	'refs/backups/work-branch-work/agrinev/h264_async_probing-1786461941' of https://invent.kde.org/plasma/krdp
+3f9e45424e35201a655e23712a2c6f21d9533206	not-for-merge	'refs/backups/work-branch-work/agrinev/h264_async_probing-1786559145' of https://invent.kde.org/plasma/krdp
+6687b29bbe895da5af313ba31339322b44279485	not-for-merge	'refs/backups/work-branch-work/agrinev/h264_async_probing-1788330202' of https://invent.kde.org/plasma/krdp
+706890487dae95e0f491643f7bb49deade0f96e7	not-for-merge	'refs/backups/work-branch-work/agrinev/h264_async_probing-1788424949' of https://invent.kde.org/plasma/krdp
+54815bd8c600387844e73caee2af72146d452a6a	not-for-merge	'refs/backups/work-branch-work/agrinev/h264_async_probing-1788500909' of https://invent.kde.org/plasma/krdp
+cefcfd83d95776c5927dbefef8b70685cb857500	not-for-merge	'refs/backups/work-branch-work/agrinev/h264_async_probing-1788874210' of https://invent.kde.org/plasma/krdp
+6ce063eaf511a80c3b9e2dd9d7f738b2980078a5	not-for-merge	'refs/backups/work-branch-work/agrinev/h264_async_probing-1788874775' of https://invent.kde.org/plasma/krdp
+e30f1688b93403f50f5a3988ef8b466d5e0d4116	not-for-merge	'refs/backups/work-branch-work/ahiemstra/cache-1720619581' of https://invent.kde.org/plasma/krdp
+9040d88496128e1b78394b6018bae8a72b9867e8	not-for-merge	'refs/backups/work-branch-work/ahiemstra/cache-1720685043' of https://invent.kde.org/plasma/krdp
+f2c85be8e79bd7e19ef6dd02738c7624cd262ca0	not-for-merge	'refs/backups/work-branch-work/ahiemstra/cache-1720685092' of https://invent.kde.org/plasma/krdp
+18107934d7719bfb8f686dc90ff86c1969c37679	not-for-merge	'refs/backups/work-branch-work/ahiemstra/cherry-pick-36-1718271993' of https://invent.kde.org/plasma/krdp
+400aeba029c1244992805fc78d28cf2663056fe9	not-for-merge	'refs/backups/work-branch-work/ahiemstra/clipboardtext-1750683071' of https://invent.kde.org/plasma/krdp
+99cb2fbac5eb59ed0a610f6a9334231c71c737bb	not-for-merge	'refs/backups/work-branch-work/ahiemstra/clipboardtext-1750689799' of https://invent.kde.org/plasma/krdp
+baa7cf78bce8eba932be4ca44123681a01d49159	not-for-merge	'refs/backups/work-branch-work/ahiemstra/clipboardtext-1750694159' of https://invent.kde.org/plasma/krdp
+1c455f78ffa88a5040bbc0803838f69e193e1921	not-for-merge	'refs/backups/work-branch-work/ahiemstra/clipboardtext-1750930766' of https://invent.kde.org/plasma/krdp
+e1541bfaf77a01ba99ff3121b8e34c166e2ae57b	not-for-merge	'refs/backups/work-branch-work/ahiemstra/colorrange-1761343033' of https://invent.kde.org/plasma/krdp
+a60e7b15b681d8a49106ca634654f5ce213eac59	not-for-merge	'refs/backups/work-branch-work/ahiemstra/colorrange-1761343269' of https://invent.kde.org/plasma/krdp
+7a3ea53236915bcd7afa77c46e067e728bc7161d	not-for-merge	'refs/backups/work-branch-work/ahiemstra/connectionstate-1721041164' of https://invent.kde.org/plasma/krdp
+9c074ffab846d1f3de6da44de3f288ae6d4ed1cc	not-for-merge	'refs/backups/work-branch-work/ahiemstra/eventdelete-1716286632' of https://invent.kde.org/plasma/krdp
+8e0047699e300ad126a0727bd00a1431c2564715	not-for-merge	'refs/backups/work-branch-work/ahiemstra/eventdelete-1716294075' of https://invent.kde.org/plasma/krdp
+d38af8f05f5da6197fd76f98ff9bc0ec6dd2301d	not-for-merge	'refs/backups/work-branch-work/ahiemstra/flatpak-keychain-1715779650' of https://invent.kde.org/plasma/krdp
+293ef64915339a5d2373304801f549d3abde35b2	not-for-merge	'refs/backups/work-branch-work/ahiemstra/flatpak-keychain-1715779955' of https://invent.kde.org/plasma/krdp
+5dabf37b5556dd596de2392cd60b6d310ae5ba04	not-for-merge	'refs/backups/work-branch-work/ahiemstra/ipv6-1720619572' of https://invent.kde.org/plasma/krdp
+d14aa0f4650072e0111c234d1ddd325421f70d50	not-for-merge	'refs/backups/work-branch-work/ahiemstra/portalpermission-1718198733' of https://invent.kde.org/plasma/krdp
+d671364878485be736b159aa6372fc4b875018cf	not-for-merge	'refs/backups/work-branch-work/ahiemstra/portalpermission-1718267568' of https://invent.kde.org/plasma/krdp
+d70f43972600d7a2f08a5633d59619ca4e10b3e9	not-for-merge	'refs/backups/work-branch-work/ahiemstra/portalpermission-1718271781' of https://invent.kde.org/plasma/krdp
+c49fd927465bf2f64a1c3ce3c7ec6f2baf676313	not-for-merge	'refs/backups/work-branch-work/ahiemstra/quality-1691412529' of https://invent.kde.org/plasma/krdp
+c61d39a41b5d534df1b75e26a9d337704c8eb161	not-for-merge	'refs/backups/work-branch-work/ahiemstra/reuse-1714137929' of https://invent.kde.org/plasma/krdp
+1143511b4372c68adef5268dc7f0406f4492c7ae	not-for-merge	'refs/backups/work-branch-work/ahiemstra/reuse-1714138164' of https://invent.kde.org/plasma/krdp
+fbb69ecfb287447d691f4e2576c242a9f9867864	not-for-merge	'refs/backups/work-branch-work/ahiemstra/reuse-1714138327' of https://invent.kde.org/plasma/krdp
+6f3a73d0a29d85481db47e4ae5853e5667915649	not-for-merge	'refs/backups/work-branch-work/ahiemstra/reuse-1714138993' of https://invent.kde.org/plasma/krdp
+0ec5b779f0ee9608931dbe551e6c6ec28a99d77f	not-for-merge	'refs/backups/work-branch-work/ahiemstra/reuse-1714376105' of https://invent.kde.org/plasma/krdp
+a126a5bb5682b60df986c5ddeda3107f453ef161	not-for-merge	'refs/backups/work-branch-work/ahiemstra/server-1712582598' of https://invent.kde.org/plasma/krdp
+33d949388ee23140697a1ca895ffb9e56e7ae2dc	not-for-merge	'refs/backups/work-branch-work/ahiemstra/server-1712667646' of https://invent.kde.org/plasma/krdp
+be8f3892545b087ea9a4f04e1aa4c5ad0a40e5a4	not-for-merge	'refs/backups/work-branch-work/ahiemstra/staticanalysis-1715777391' of https://invent.kde.org/plasma/krdp
+133dcd2aaf9f3d70729b3aa79068dedc774a5e54	not-for-merge	'refs/backups/work-branch-work/ahiemstra/staticanalysis-1715777481' of https://invent.kde.org/plasma/krdp
+377b2fc32e5135fd001e8519a5e59ff9f508df81	not-for-merge	'refs/backups/work-branch-work/akselmo/add-kcm-to-readme-1716314033' of https://invent.kde.org/plasma/krdp
+f851c0fd8253996d11c9f95bc2ffc7f516c93717	not-for-merge	'refs/backups/work-branch-work/akselmo/add-messages-sh-1715941824' of https://invent.kde.org/plasma/krdp
+979daa377355c7aa54a3f45c17b26d567b81e445	not-for-merge	'refs/backups/work-branch-work/akselmo/add-messages-sh-1715949861' of https://invent.kde.org/plasma/krdp
+1cc3c1ab05b39b3291418639bf7fc3e6455278b9	not-for-merge	'refs/backups/work-branch-work/akselmo/address-list-label-1716314218' of https://invent.kde.org/plasma/krdp
+8a665ab68ad27c4a622f89fedbe03f4a4a01a7b4	not-for-merge	'refs/backups/work-branch-work/akselmo/address-list-label-1716314600' of https://invent.kde.org/plasma/krdp
+2904e4e48d55e429e43b7e1e6c06e4ffe3591a09	not-for-merge	'refs/backups/work-branch-work/akselmo/allow-changing-settings-server-running-1721067079' of https://invent.kde.org/plasma/krdp
+f722b1c4aff0db380d32af2340c20350c42ef1ff	not-for-merge	'refs/backups/work-branch-work/akselmo/allow-changing-settings-server-running-1721229165' of https://invent.kde.org/plasma/krdp
+64a94bcc03fa33895e4deeffb09fd78699dd298a	not-for-merge	'refs/backups/work-branch-work/akselmo/allow-changing-settings-server-running-1722866269' of https://invent.kde.org/plasma/krdp
+43d9268a0c7cf25aba5f7682ab7adbbd318d886e	not-for-merge	'refs/backups/work-branch-work/akselmo/allow-changing-settings-server-running-1722870804' of https://invent.kde.org/plasma/krdp
+909ebd3a8dc50c6bd242c764d0da5b818b66e736	not-for-merge	'refs/backups/work-branch-work/akselmo/allow-toggle-without-accounts-1720634688' of https://invent.kde.org/plasma/krdp
+4f2a9761c86012519b5374a6e26313cfe5b6a52b	not-for-merge	'refs/backups/work-branch-work/akselmo/clipboard-support-1733910577' of https://invent.kde.org/plasma/krdp
+1fabd316059e857e12f92d63be1432e4889b9d76	not-for-merge	'refs/backups/work-branch-work/akselmo/clipboard-support-1733917270' of https://invent.kde.org/plasma/krdp
+8598a1ae1825e357844d27c3094d9c0fa4fcd092	not-for-merge	'refs/backups/work-branch-work/akselmo/clipboard-support-1733917310' of https://invent.kde.org/plasma/krdp
+254f93e98643b2e5ec0a7768f0276cd41f51d4a3	not-for-merge	'refs/backups/work-branch-work/akselmo/clipboard-support-1733917454' of https://invent.kde.org/plasma/krdp
+dd2a0f7db3c896d2d78dc58e00fd82052973f500	not-for-merge	'refs/backups/work-branch-work/akselmo/clipboard-support-1733918383' of https://invent.kde.org/plasma/krdp
+68f50d221fe2f2ea1890cc776162c75bc0febe8f	not-for-merge	'refs/backups/work-branch-work/akselmo/clipboard-support-1733924224' of https://invent.kde.org/plasma/krdp
+59ef5eac8f606672cbe0045f30d25847e52113be	not-for-merge	'refs/backups/work-branch-work/akselmo/close-if-portal-is-closed-1718290484' of https://invent.kde.org/plasma/krdp
+b741353e55ac7d0abdfd13552c8810b36610c9cd	not-for-merge	'refs/backups/work-branch-work/akselmo/close-if-portal-is-closed-1718290741' of https://invent.kde.org/plasma/krdp
+757a30d489e8271244ca0e24541db7af74497d81	not-for-merge	'refs/backups/work-branch-work/akselmo/close-if-portal-is-closed-1718290836' of https://invent.kde.org/plasma/krdp
+50e083893932c01767c1c8341626e417fbd5e015	not-for-merge	'refs/backups/work-branch-work/akselmo/disconnect-on-crash-1733926114' of https://invent.kde.org/plasma/krdp
+2977c8c25a51cbf3928ddfbeff59c09755db5f63	not-for-merge	'refs/backups/work-branch-work/akselmo/disconnect-on-crash-1733926922' of https://invent.kde.org/plasma/krdp
+faab23a311b6d1b1add50a1d9e2cc5c61a88f75f	not-for-merge	'refs/backups/work-branch-work/akselmo/disconnect-on-crash-1733927314' of https://invent.kde.org/plasma/krdp
+3ab448b86d42438dcb2bf29b13b2019b44f04b56	not-for-merge	'refs/backups/work-branch-work/akselmo/disconnect-on-crash-1733927566' of https://invent.kde.org/plasma/krdp
+2a19303854603370ab13b8969943995108d93da1	not-for-merge	'refs/backups/work-branch-work/akselmo/fix-deprecated-start-stop-1746135969' of https://invent.kde.org/plasma/krdp
+bc7a4fd6f775e01db55c8d4d8368ce7176663120	not-for-merge	'refs/backups/work-branch-work/akselmo/fix-flatpak-build-1718352686' of https://invent.kde.org/plasma/krdp
+83ecaa5fb2f4649e757d93a947c780644d6ae579	not-for-merge	'refs/backups/work-branch-work/akselmo/fix-server-running-async-check-1716806358' of https://invent.kde.org/plasma/krdp
+3589868d75fb53e46da339759158b45750c6ac42	not-for-merge	'refs/backups/work-branch-work/akselmo/fix-server-running-async-check-1716806725' of https://invent.kde.org/plasma/krdp
+254d2cfc05a06ac31b7764562e08eac7919e21d3	not-for-merge	'refs/backups/work-branch-work/akselmo/fix-server-running-async-check-1716806955' of https://invent.kde.org/plasma/krdp
+d4afbd15223007377014cdbef36699db222fe442	not-for-merge	'refs/backups/work-branch-work/akselmo/fix-server-running-async-check-1716810997' of https://invent.kde.org/plasma/krdp
+9f2835836a698dc7556a54a518b438d91efb0255	not-for-merge	'refs/backups/work-branch-work/akselmo/fix-server-running-async-check-1716881364' of https://invent.kde.org/plasma/krdp
+6302ee4250dd1e669d7257111247f8d1c759d4f0	not-for-merge	'refs/backups/work-branch-work/akselmo/fix-server-running-async-check-1716885827' of https://invent.kde.org/plasma/krdp
+06949cc526c3717d4d59a2980098a28e5739eed6	not-for-merge	'refs/backups/work-branch-work/akselmo/fix-virtual-monitor-regexp-1725451986' of https://invent.kde.org/plasma/krdp
+a8f137ee92805ede63953ff55756f8f709258929	not-for-merge	'refs/backups/work-branch-work/akselmo/hook-kcm-to-server-binary-1712569956' of https://invent.kde.org/plasma/krdp
+6e3b8092d8062f3a7cdc0103aa6fcc9498e5b675	not-for-merge	'refs/backups/work-branch-work/akselmo/hook-kcm-to-server-binary-1712755797' of https://invent.kde.org/plasma/krdp
+ec732399c7b9a5b556f9c4273a72412e9c944b82	not-for-merge	'refs/backups/work-branch-work/akselmo/hook-kcm-to-server-binary-1712764304' of https://invent.kde.org/plasma/krdp
+d1febb849e10a23bae15cd4392c5633b1aae1710	not-for-merge	'refs/backups/work-branch-work/akselmo/hook-kcm-to-server-binary-1712825761' of https://invent.kde.org/plasma/krdp
+5a6dede0dfd902831254a76b103f41df32d00539	not-for-merge	'refs/backups/work-branch-work/akselmo/initializationsession-1746135981' of https://invent.kde.org/plasma/krdp
+31faf21dfada9adddd31231b12fae32dc9d23707	not-for-merge	'refs/backups/work-branch-work/akselmo/initializationsession-1746136077' of https://invent.kde.org/plasma/krdp
+c4cab07b0cfe6f6bacafc019ef5f6e628f593485	not-for-merge	'refs/backups/work-branch-work/akselmo/kcm-1710170044' of https://invent.kde.org/plasma/krdp
+2c8f582b0e85a1b4621da226d88385cd07f2a8db	not-for-merge	'refs/backups/work-branch-work/akselmo/kcm-1710414716' of https://invent.kde.org/plasma/krdp
+275c6655fafb112c6bc2bc28a65a1bdb6e00a8c3	not-for-merge	'refs/backups/work-branch-work/akselmo/kcm-1710414778' of https://invent.kde.org/plasma/krdp
+1633615bdc6b46df4026642f0a71dbbab676cb25	not-for-merge	'refs/backups/work-branch-work/akselmo/kcm-1710415177' of https://invent.kde.org/plasma/krdp
+6e55ff8f5ff4c1c2d728b18934fd473c8f2cc357	not-for-merge	'refs/backups/work-branch-work/akselmo/kcm-1711113709' of https://invent.kde.org/plasma/krdp
+7304a27cbf0e3e800cfd5677e280fa8bb796cd5e	not-for-merge	'refs/backups/work-branch-work/akselmo/kcm-1711113761' of https://invent.kde.org/plasma/krdp
+33d867ee7238442908441901f53b742bc436e034	not-for-merge	'refs/backups/work-branch-work/akselmo/kcm-1711368297' of https://invent.kde.org/plasma/krdp
+bc661a900b3d794e7299180c824b4fe72eaf6bb5	not-for-merge	'refs/backups/work-branch-work/akselmo/kcm-1712143452' of https://invent.kde.org/plasma/krdp
+42613af4c67027682c28ac8d735f7fcd8f3bcb64	not-for-merge	'refs/backups/work-branch-work/akselmo/kcm-1712921917' of https://invent.kde.org/plasma/krdp
+f9c3441c70d924d6696d0a0ca20ec78b64bb58df	not-for-merge	'refs/backups/work-branch-work/akselmo/kcm-1712926778' of https://invent.kde.org/plasma/krdp
+b79c7ea09587b81597bd8344b30ebb2cb83e772f	not-for-merge	'refs/backups/work-branch-work/akselmo/kcm-1712927357' of https://invent.kde.org/plasma/krdp
+30aab90a29eba94b7271e4328782b5d790ff55a0	not-for-merge	'refs/backups/work-branch-work/akselmo/kcm-1713166824' of https://invent.kde.org/plasma/krdp
+0dcf87e991bc83e74683158a3b0781b17952fed5	not-for-merge	'refs/backups/work-branch-work/akselmo/kcm-1713167201' of https://invent.kde.org/plasma/krdp
+c2e3ab0af226a559287dbd354749e36abdd0b0fd	not-for-merge	'refs/backups/work-branch-work/akselmo/kcm-1713167316' of https://invent.kde.org/plasma/krdp
+3aa43ed5d1ad3fade8676f0813168d8b607486f7	not-for-merge	'refs/backups/work-branch-work/akselmo/kcm-1713357521' of https://invent.kde.org/plasma/krdp
+4eee4fb472ff10a358afe1139ae13bdcf9e7f75f	not-for-merge	'refs/backups/work-branch-work/akselmo/kcm-1713357755' of https://invent.kde.org/plasma/krdp
+d678b814bbea89d7e050ed6bf0653e319757db31	not-for-merge	'refs/backups/work-branch-work/akselmo/kcm-1713357797' of https://invent.kde.org/plasma/krdp
+33f138e1bef0002e56c6d70af453f24eeceaa55c	not-for-merge	'refs/backups/work-branch-work/akselmo/kcm-1713436439' of https://invent.kde.org/plasma/krdp
+a20a89b52457ae72f72e2fd67923c7b3aa85ebbc	not-for-merge	'refs/backups/work-branch-work/akselmo/kcm-1713881488' of https://invent.kde.org/plasma/krdp
+54d70d092269a3aeb1a7aa5a307a68b428b1d216	not-for-merge	'refs/backups/work-branch-work/akselmo/kcm-1713881662' of https://invent.kde.org/plasma/krdp
+2e58809200f9bddccf6d1e5db05c62b51130f04c	not-for-merge	'refs/backups/work-branch-work/akselmo/kcm-1713881745' of https://invent.kde.org/plasma/krdp
+3fd3cff1e8e5cbf0f5cf83170868318e5a8c44f4	not-for-merge	'refs/backups/work-branch-work/akselmo/kcm-1713881833' of https://invent.kde.org/plasma/krdp
+8050060524daa468ad304cc361836af1ea785422	not-for-merge	'refs/backups/work-branch-work/akselmo/kcm-1713881966' of https://invent.kde.org/plasma/krdp
+e9f344149b7cdb652209dd5cfbc11b81e6319e43	not-for-merge	'refs/backups/work-branch-work/akselmo/kcm-1713882079' of https://invent.kde.org/plasma/krdp
+8feaa01db868c5cc5791896b073ed76c1aafc5a1	not-for-merge	'refs/backups/work-branch-work/akselmo/kcm-1713962051' of https://invent.kde.org/plasma/krdp
+cda3baf86d5b5f49c1cf22a886d419c2e3e265a5	not-for-merge	'refs/backups/work-branch-work/akselmo/kcm-1714121334' of https://invent.kde.org/plasma/krdp
+6c63c946cf44c0b9494a8f66437fbfa947ec8c95	not-for-merge	'refs/backups/work-branch-work/akselmo/kcm-1714123233' of https://invent.kde.org/plasma/krdp
+d2c5c1e5181d79839b7f63b0e472962e015b38ee	not-for-merge	'refs/backups/work-branch-work/akselmo/kcm-1714376705' of https://invent.kde.org/plasma/krdp
+fefda4645b51a49d210a64237ecbf38b3ac84910	not-for-merge	'refs/backups/work-branch-work/akselmo/kcm-1714381642' of https://invent.kde.org/plasma/krdp
+2df7ebf7e43fdb9ed267b1c32a9e000e51cecea2	not-for-merge	'refs/backups/work-branch-work/akselmo/kcm-1714646608' of https://invent.kde.org/plasma/krdp
+e406931bfc69855f0d55a01da557998b8adca663	not-for-merge	'refs/backups/work-branch-work/akselmo/kcm-1714646705' of https://invent.kde.org/plasma/krdp
+54f4a7cc3a78631520c7721b6afae5dd3a73ec12	not-for-merge	'refs/backups/work-branch-work/akselmo/kcm-1714647021' of https://invent.kde.org/plasma/krdp
+becc8a0df17a928005d31940205e4c2dc80075d6	not-for-merge	'refs/backups/work-branch-work/akselmo/kcm-1714651365' of https://invent.kde.org/plasma/krdp
+3154c3129054babc39cc3fba4a6fcb81aae95ff0	not-for-merge	'refs/backups/work-branch-work/akselmo/kcm-1714990798' of https://invent.kde.org/plasma/krdp
+5cd96dbad5f17d79a38ce37675dd7694e68681b6	not-for-merge	'refs/backups/work-branch-work/akselmo/kcm-1714990887' of https://invent.kde.org/plasma/krdp
+cadb48e433e8956576a277bb5ba8efcb73e231f9	not-for-merge	'refs/backups/work-branch-work/akselmo/kcm-1714991137' of https://invent.kde.org/plasma/krdp
+81258b08885197a864e7fdfbe2900903641d96c3	not-for-merge	'refs/backups/work-branch-work/akselmo/kcm-service-1712238343' of https://invent.kde.org/plasma/krdp
+4aa7888b245fb181154f753834f4c6680b56e2ed	not-for-merge	'refs/backups/work-branch-work/akselmo/kcm-service-1712238363' of https://invent.kde.org/plasma/krdp
+bd156b259bdedbe7928ae00fb61da6d0db262285	not-for-merge	'refs/backups/work-branch-work/akselmo/new-quality-defaults-1745935028' of https://invent.kde.org/plasma/krdp
+f3b3199fd49136e742d92654e550740e1eea7556	not-for-merge	'refs/backups/work-branch-work/akselmo/new-quality-defaults-1745953377' of https://invent.kde.org/plasma/krdp
+2bc4c2dd28d4c6f032c90e3f5c85db3e24d968c8	not-for-merge	'refs/backups/work-branch-work/akselmo/quitting-server-shows-in-kcm-1718294933' of https://invent.kde.org/plasma/krdp
+75114bbd7ed11c2ac2ec5c9187da8f4eb827202e	not-for-merge	'refs/backups/work-branch-work/akselmo/remove-sni-status-change-1718289180' of https://invent.kde.org/plasma/krdp
+2b699365e77672b62e1e9c0e8dc02e1165441d90	not-for-merge	'refs/backups/work-branch-work/akselmo/show-kcm-on-wayland-only-1733827789' of https://invent.kde.org/plasma/krdp
+63dedbd781d9799632cca675ff93d5d6b8a52160	not-for-merge	'refs/backups/work-branch-work/akselmo/skip-confirmation-dialog-1718290495' of https://invent.kde.org/plasma/krdp
+c9c3c1d361c8f6592e3924252ea1eed74c2467dc	not-for-merge	'refs/backups/work-branch-work/akselmo/skip-confirmation-dialog-1718290925' of https://invent.kde.org/plasma/krdp
+9e5774130569c58bd6851879708ecd3a276556f0	not-for-merge	'refs/backups/work-branch-work/akselmo/skip-confirmation-dialog-1718291101' of https://invent.kde.org/plasma/krdp
+bb76e48771cb3e87ed9f0e917defc32d802b1358	not-for-merge	'refs/backups/work-branch-work/akselmo/skip-confirmation-dialog-1718291194' of https://invent.kde.org/plasma/krdp
+8fef36a69d87afaa9ae804a57b399bcd5ccfc4f3	not-for-merge	'refs/backups/work-branch-work/akselmo/slider-tickmarks-1776863049' of https://invent.kde.org/plasma/krdp
+370425e68cce0e38f47e2ae95a7ee4197bbf183e	not-for-merge	'refs/backups/work-branch-work/akselmo/startup-failure-popup-1760971707' of https://invent.kde.org/plasma/krdp
+669884ee9c8699b2bd9ef1ca0a7a10ac33f20471	not-for-merge	'refs/backups/work-branch-work/akselmo/startup-failure-popup-1760971749' of https://invent.kde.org/plasma/krdp
+e7ce06303480e752d40aea9106a9918b06cbc830	not-for-merge	'refs/backups/work-branch-work/akselmo/startup-failure-popup-1761574818' of https://invent.kde.org/plasma/krdp
+a8ac9bc849f8ea6d02b1c41ef818be6f446e15fc	not-for-merge	'refs/backups/work-branch-work/akselmo/startup-failure-popup-1761658265' of https://invent.kde.org/plasma/krdp
+560f46fa3eadc097af6806908a2427c98a35253a	not-for-merge	'refs/backups/work-branch-work/akselmo/startup-failure-popup-1761745558' of https://invent.kde.org/plasma/krdp
+c103d3de326e6d294cbc307fcccbf87e8f18ae5d	not-for-merge	'refs/backups/work-branch-work/akselmo/startup-failure-popup-1761746844' of https://invent.kde.org/plasma/krdp
+e51e2643fb7f3944cd506b0d4e45a2f9ee9703d1	not-for-merge	'refs/backups/work-branch-work/akselmo/startup-failure-popup-1761912265' of https://invent.kde.org/plasma/krdp
+c54c4b6aca7dc93d667e19a7d4ef07e033a2dacd	not-for-merge	'refs/backups/work-branch-work/akselmo/startup-failure-popup-1761919947' of https://invent.kde.org/plasma/krdp
+5f37bf3a9ea5fece80c3e238de30d836c5b777dc	not-for-merge	'refs/backups/work-branch-work/akselmo/startup-failure-popup-1762160762' of https://invent.kde.org/plasma/krdp
+677b1dfb7600cdf82c9ddece661697e98e8ad81c	not-for-merge	'refs/backups/work-branch-work/akselmo/startup-failure-popup-1762257615' of https://invent.kde.org/plasma/krdp
+6c9e242c11b586af9e857a9e10c9879db8c7e8bd	not-for-merge	'refs/backups/work-branch-work/akselmo/startup-failure-popup-1762416871' of https://invent.kde.org/plasma/krdp
+579c3b6520a7c640eb81339a62c108900de71d0d	not-for-merge	'refs/backups/work-branch-work/akselmo/startup-failure-popup-1762416988' of https://invent.kde.org/plasma/krdp
+0beb2bc09af374b1c258ed6afb42c797bee8c616	not-for-merge	'refs/backups/work-branch-work/akselmo/use-speed-encoding-preference-1715766915' of https://invent.kde.org/plasma/krdp
+ae34dd50a7817c45515e67d51ef54bc97e688a60	not-for-merge	'refs/backups/work-branch-work/akselmo/use-speed-encoding-preference-1715864265' of https://invent.kde.org/plasma/krdp
+bcf7012712361871607baba0774daf8cb49636c2	not-for-merge	'refs/backups/work-branch-work/akselmo/use-speed-encoding-preference-1715868198' of https://invent.kde.org/plasma/krdp
+bdce2c5c7576ad2caa0209c9334a9feafec14d9a	not-for-merge	'refs/backups/work-branch-work/akselmo/use-titlesubtitlewithactions-1763724234' of https://invent.kde.org/plasma/krdp
+bd9e4a595c8d07b72d58095b57ed5fa12ba1e053	not-for-merge	'refs/backups/work-branch-work/akselmo/use-titlesubtitlewithactions-1763724290' of https://invent.kde.org/plasma/krdp
+848c929ceca17deb9f1c61921c7b785af40a028d	not-for-merge	'refs/backups/work-branch-work/akselmo/use-titlesubtitlewithactions-1765187396' of https://invent.kde.org/plasma/krdp
+d33c157fd2ffc26b96eb46504b2feb5f825838ed	not-for-merge	'refs/backups/work-branch-work/akselmo/use-titlesubtitlewithactions-1765187829' of https://invent.kde.org/plasma/krdp
+3e19526e50c52343755873a429a588d68a49dbf2	not-for-merge	'refs/backups/work-branch-work/apol/args-1750930787' of https://invent.kde.org/plasma/krdp
+cf882a861b9796a3592a95ffcb126155b853b060	not-for-merge	'refs/backups/work-branch-work/apol/args-1751009749' of https://invent.kde.org/plasma/krdp
+baffb575f5ff69b67fa449519c8a51bf0648950d	not-for-merge	'refs/backups/work-branch-work/apol/args-1751009848' of https://invent.kde.org/plasma/krdp
+732df94942a49cab2b252b6faad0019457fba352	not-for-merge	'refs/backups/work-branch-work/apol/encoded-stream-1677722544' of https://invent.kde.org/plasma/krdp
+00eb67941bbc1ef4f8bcd24c070e11dc1ee790ea	not-for-merge	'refs/backups/work-branch-work/apol/encoded-stream-1678113227' of https://invent.kde.org/plasma/krdp
+1d45e15d5600787b3b91250637e9950762ad1f38	not-for-merge	'refs/backups/work-branch-work/apol/encoded-stream-1678288844' of https://invent.kde.org/plasma/krdp
+52fcce6403332e42d14df1e60dffa6310da4f190	not-for-merge	'refs/backups/work-branch-work/apol/encoded-stream-1678709375' of https://invent.kde.org/plasma/krdp
+aa0489c1729c290c1e0f7779a137fd3be1e26ff9	not-for-merge	'refs/backups/work-branch-work/apol/fixies-1679070232' of https://invent.kde.org/plasma/krdp
+74f6c27575de0c182880ff033d3289c43f7918b5	not-for-merge	'refs/backups/work-branch-work/apol/frames-are-key-1679499636' of https://invent.kde.org/plasma/krdp
+8f4b23c0a830c62c549e6592a261c381b8f50cb1	not-for-merge	'refs/backups/work-branch-work/apol/frames-are-key-1679499685' of https://invent.kde.org/plasma/krdp
+f72ef92874af972012fc4f07efdc01b57891d2a4	not-for-merge	'refs/backups/work-branch-work/apol/frames-are-key-1679500069' of https://invent.kde.org/plasma/krdp
+9484b35479eed3341577ba95a16176c5ea45e288	not-for-merge	'refs/backups/work-branch-work/apol/krdp-non-portal-1693233620' of https://invent.kde.org/plasma/krdp
+876088cd9a3d6b6592326ecc3ed682fc141f2271	not-for-merge	'refs/backups/work-branch-work/apol/krdp-non-portal-1693476392' of https://invent.kde.org/plasma/krdp
+09167412584d3c1a7d0f851699844fccfcd27b29	not-for-merge	'refs/backups/work-branch-work/apol/krdp-non-portal-1694858838' of https://invent.kde.org/plasma/krdp
+b4f415a4c9d07e48e9611906de30aefb7ee388b4	not-for-merge	'refs/backups/work-branch-work/apol/krdp-non-portal-1695135036' of https://invent.kde.org/plasma/krdp
+7d5e3ce84c21c89bf68d9e2e029970b799b13956	not-for-merge	'refs/backups/work-branch-work/apol/qt6-1678286252' of https://invent.kde.org/plasma/krdp
+ad64507a77dca6fe52b4a2f527b24123fb834b18	not-for-merge	'refs/backups/work-branch-work/apol/qt6-1678286517' of https://invent.kde.org/plasma/krdp
+6be33f3cd8e7fce803bbced9a91e8221683cdb8e	not-for-merge	'refs/backups/work-branch-work/apol/virtual-monitor-1724105739' of https://invent.kde.org/plasma/krdp
+4ff1e15bb07cb5275415b9d6b1a2f0ce1fadfb9f	not-for-merge	'refs/backups/work-branch-work/apol/virtual-monitor-1724108002' of https://invent.kde.org/plasma/krdp
+3717176182a26f5cf99d1ee52f840debc66739e7	not-for-merge	'refs/backups/work-branch-work/apol/virtual-monitor-1724198196' of https://invent.kde.org/plasma/krdp
+0582792b55d35cd9bea10bdbb96d9c5c75236ff5	not-for-merge	'refs/backups/work-branch-work/apol/virtual-monitor-1724282155' of https://invent.kde.org/plasma/krdp
+29df5673aaec8a0c51f9ede6ab23cc3eac179846	not-for-merge	'refs/backups/work-branch-work/apol/virtual-monitor-1724318094' of https://invent.kde.org/plasma/krdp
+7d7d56ec413a7e5634e694d0f708061b2faa4473	not-for-merge	'refs/backups/work-branch-work/apol/virtual-monitor-1724318163' of https://invent.kde.org/plasma/krdp
+e19742ddb3d7dd99892a9e1bd87bd615ae0c059d	not-for-merge	'refs/backups/work-branch-work/asturmlechner/cmake-freerdp-2-1718573405' of https://invent.kde.org/plasma/krdp
+d6b12bf58af0c49fa5fb4a9caa40577753ed1d23	not-for-merge	'refs/backups/work-branch-work/cherry-pick-095f6ea5-1791901978' of https://invent.kde.org/plasma/krdp
+786cd94f84e1d06f9ee3d4910b0e9eed6c5916cb	not-for-merge	'refs/backups/work-branch-work/cherry-pick-14c5689f-1720685744' of https://invent.kde.org/plasma/krdp
+ee6c26ff87ed3aac3b4f41f4536e43d7afb84dd7	not-for-merge	'refs/backups/work-branch-work/cherry-pick-231bec4e-1772474785' of https://invent.kde.org/plasma/krdp
+5c4808a82b831c8aec96bf07f35786d0d00ae174	not-for-merge	'refs/backups/work-branch-work/cherry-pick-2b699365-1733827906' of https://invent.kde.org/plasma/krdp
+06249cab9e166d62ed2f3c2025113960ce2d8e0f	not-for-merge	'refs/backups/work-branch-work/cherry-pick-2bc4c2dd-1718295004' of https://invent.kde.org/plasma/krdp
+855015ff80c871c1f6397b4c534d93e5cd2f2656	not-for-merge	'refs/backups/work-branch-work/cherry-pick-3ab448b8-1733928158' of https://invent.kde.org/plasma/krdp
+a8219d2c89414faf8c5a3ece05acaa14e67c2e82	not-for-merge	'refs/backups/work-branch-work/cherry-pick-41585c6e-1781109971' of https://invent.kde.org/plasma/krdp
+d8c1f28634289806e88d4ff14a53237cced059a8	not-for-merge	'refs/backups/work-branch-work/cherry-pick-433babfe-1771944421' of https://invent.kde.org/plasma/krdp
+125d8de7cada30823bf52fc5affa5acba1df4a47	not-for-merge	'refs/backups/work-branch-work/cherry-pick-49ebbf43-1782895427' of https://invent.kde.org/plasma/krdp
+b26d59cf8d56ab163caf6c2e8436f591e7caf1d3	not-for-merge	'refs/backups/work-branch-work/cherry-pick-59763161-1772474220' of https://invent.kde.org/plasma/krdp
+67aaa5a7e58eadec456d88feb11343dda22a90a3	not-for-merge	'refs/backups/work-branch-work/cherry-pick-5dabf37b-1720685081' of https://invent.kde.org/plasma/krdp
+7687cb5d4df568e62550fd6f92ef69ba16b0551a	not-for-merge	'refs/backups/work-branch-work/cherry-pick-6a41f9a1-1751812848' of https://invent.kde.org/plasma/krdp
+b537fdcb10a66fe3ea28277a35eeebc9fbfcbec1	not-for-merge	'refs/backups/work-branch-work/cherry-pick-6f2933bb-1733924328' of https://invent.kde.org/plasma/krdp
+b1080661f30d0bab4055a50e18622533ef80a1b9	not-for-merge	'refs/backups/work-branch-work/cherry-pick-70f93c32-1784705073' of https://invent.kde.org/plasma/krdp
+0a4278f6cd14aa832a19f0e6bcc6a06d3975c15f	not-for-merge	'refs/backups/work-branch-work/cherry-pick-72f53e64-1769687860' of https://invent.kde.org/plasma/krdp
+7f105b54363775e48919783c0649e170740b417d	not-for-merge	'refs/backups/work-branch-work/cherry-pick-75dbd361-1748960638' of https://invent.kde.org/plasma/krdp
+2d95ca34ac465936f274a54e733a93589cef14d7	not-for-merge	'refs/backups/work-branch-work/cherry-pick-7a3ea532-1721041237' of https://invent.kde.org/plasma/krdp
+692e8d28437fb0ee41823cbfb7a924d4904da9cc	not-for-merge	'refs/backups/work-branch-work/cherry-pick-7ee5cd42-1790798509' of https://invent.kde.org/plasma/krdp
+e4f2dd68ab8f71d7af95ea8809e1817e3181f52d	not-for-merge	'refs/backups/work-branch-work/cherry-pick-804eb471-1781729706' of https://invent.kde.org/plasma/krdp
+75cf9402091c3974e446f04df0e31dc4466a2341	not-for-merge	'refs/backups/work-branch-work/cherry-pick-8e1de600-1781007604' of https://invent.kde.org/plasma/krdp
+f0f9ae78d92e222c48e94efadf1d3102ca6bbf3a	not-for-merge	'refs/backups/work-branch-work/cherry-pick-8e1de600-1781008086' of https://invent.kde.org/plasma/krdp
+6b64676ce6924af0c8ddf39837e5df58f4d93195	not-for-merge	'refs/backups/work-branch-work/cherry-pick-909ebd3a-1720634716' of https://invent.kde.org/plasma/krdp
+e74f57429e443ca1dbddd8f922eb211f2218bc48	not-for-merge	'refs/backups/work-branch-work/cherry-pick-95bd4dba-1716754495' of https://invent.kde.org/plasma/krdp
+b98b334afdd710137ff3171e6b6a7e8c5b868a85	not-for-merge	'refs/backups/work-branch-work/cherry-pick-9720a5dd-1718290982' of https://invent.kde.org/plasma/krdp
+6d453c86d25c4a0b4acce70fb12499211201fe48	not-for-merge	'refs/backups/work-branch-work/cherry-pick-9986a6a9-1792174860' of https://invent.kde.org/plasma/krdp
+9395b1c8e6e018a24c179b57c8e6b85fbee79b7b	not-for-merge	'refs/backups/work-branch-work/cherry-pick-a035b7a4-1782397592' of https://invent.kde.org/plasma/krdp
+899fc1fd7b64af448a61331cf2966b803b82ad1f	not-for-merge	'refs/backups/work-branch-work/cherry-pick-a207cfc1-1782893138' of https://invent.kde.org/plasma/krdp
+e778e26588862e1cda0f40e70f92c21481b70675	not-for-merge	'refs/backups/work-branch-work/cherry-pick-a4f25f53-1718289257' of https://invent.kde.org/plasma/krdp
+5dd6f7e3ee679f938cf46549087afb954b99c755	not-for-merge	'refs/backups/work-branch-work/cherry-pick-ad393302-1741201189' of https://invent.kde.org/plasma/krdp
+4d65be1fb557058fa3cff7e26d2f9cb377ef1879	not-for-merge	'refs/backups/work-branch-work/cherry-pick-b0975b63-1716886137' of https://invent.kde.org/plasma/krdp
+7b234cc8a2972cfab40a70eae8d9f29cfe3612b5	not-for-merge	'refs/backups/work-branch-work/cherry-pick-b6c905d2-1783937656' of https://invent.kde.org/plasma/krdp
+aa9d4e65b259f47964756c6555bfde2e19af97f1	not-for-merge	'refs/backups/work-branch-work/cherry-pick-b6c905d2-1783937750' of https://invent.kde.org/plasma/krdp
+f184d8793d36aac408d4cebc5cdb980b5b43929e	not-for-merge	'refs/backups/work-branch-work/cherry-pick-bc7a4fd6-1718352894' of https://invent.kde.org/plasma/krdp
+ac2105d693d0d566fd0b87b0ab5778f4983cf637	not-for-merge	'refs/backups/work-branch-work/cherry-pick-c252930c-1768587917' of https://invent.kde.org/plasma/krdp
+dd956081c8a3158366cc99410b70e6af2344276b	not-for-merge	'refs/backups/work-branch-work/cherry-pick-c6c58fb9-1718291261' of https://invent.kde.org/plasma/krdp
+901f2645270088707a22fe2e88736158c87fa9d1	not-for-merge	'refs/backups/work-branch-work/cherry-pick-cc67efe6-1772475828' of https://invent.kde.org/plasma/krdp
+d600dd4ed2baa4ac9317dfa0cfd2fbff54bc3924	not-for-merge	'refs/backups/work-branch-work/cherry-pick-d736d8a3-1772471691' of https://invent.kde.org/plasma/krdp
+a31b9a7a53d8696cefc8c032d9ba332e9eeb49ba	not-for-merge	'refs/backups/work-branch-work/cherry-pick-df4d9d4e-1737971720' of https://invent.kde.org/plasma/krdp
+d2e49c9904897d418930d2e014ad1c4d86df93c4	not-for-merge	'refs/backups/work-branch-work/cherry-pick-e19742dd-1718573488' of https://invent.kde.org/plasma/krdp
+f777389591627dd8bfa10fd487a755aadcd74811	not-for-merge	'refs/backups/work-branch-work/cherry-pick-ea02751b-1780076723' of https://invent.kde.org/plasma/krdp
+111f6bc0da6feb9a83bc1a4899bd22a0ab7e8447	not-for-merge	'refs/backups/work-branch-work/cherry-pick-eb3a4db5-1716794497' of https://invent.kde.org/plasma/krdp
+097eaf5d41c5f5d8ba99a6c75da4769b43c9d852	not-for-merge	'refs/backups/work-branch-work/cherry-pick-f1647b65-1736506361' of https://invent.kde.org/plasma/krdp
+a30b814130ab28c720bc15e9de101dabb42e36d6	not-for-merge	'refs/backups/work-branch-work/cherry-pick-f3858351-1771399622' of https://invent.kde.org/plasma/krdp
+31824f94c16bb4ccfc7739c2669bda1b3f5ca94b	not-for-merge	'refs/backups/work-branch-work/cherry-pick-f868133d-1790953934' of https://invent.kde.org/plasma/krdp
+472584e57758863fa7aea831450e52d09c3900de	not-for-merge	'refs/backups/work-branch-work/cherry-pick-fe003738-1791899315' of https://invent.kde.org/plasma/krdp
+0cf963fb04c555b932069f88960d275055016479	not-for-merge	'refs/backups/work-branch-work/compile_qt6_next-1739362997' of https://invent.kde.org/plasma/krdp
+da8818db5c84412337d7c215eb35476425906404	not-for-merge	'refs/backups/work-branch-work/compile_without_kf_6_23_deprecated-1772915178' of https://invent.kde.org/plasma/krdp
+257692115ceec38d952f5f10460205d14f0876b7	not-for-merge	'refs/backups/work-branch-work/d_ed/adjust_buffer_size-1715691825' of https://invent.kde.org/plasma/krdp
+c1605cede1f6b5666e13a465424ae1765154724d	not-for-merge	'refs/backups/work-branch-work/d_ed/adjust_buffer_size-1715721211' of https://invent.kde.org/plasma/krdp
+bc69badc459bcbd8e00e91c60e456d575e46df09	not-for-merge	'refs/backups/work-branch-work/d_ed/adjust_buffer_size-1715721260' of https://invent.kde.org/plasma/krdp
+7a803ab9b33cf6a96130a484a853525e10284006	not-for-merge	'refs/backups/work-branch-work/d_ed/auth_fix-1786017817' of https://invent.kde.org/plasma/krdp
+de28ce468831424182cd42b6dcd7c6420fd3fe96	not-for-merge	'refs/backups/work-branch-work/d_ed/backend_after_auth-1786311398' of https://invent.kde.org/plasma/krdp
+9b82eca6785e7f099aa0db18c175816682444eb8	not-for-merge	'refs/backups/work-branch-work/d_ed/backend_after_auth-1786312745' of https://invent.kde.org/plasma/krdp
+a325a719a406937fb60cf24f02d2967b499b8612	not-for-merge	'refs/backups/work-branch-work/d_ed/backend_after_auth-1786312786' of https://invent.kde.org/plasma/krdp
+3c8c764d15f88801345ecd0e4e5dbe402553fde5	not-for-merge	'refs/backups/work-branch-work/d_ed/backend_after_auth-1786399365' of https://invent.kde.org/plasma/krdp
+a6a455bd853a5776f5e49207dad46411b7ec2495	not-for-merge	'refs/backups/work-branch-work/d_ed/backend_after_auth-1786431264' of https://invent.kde.org/plasma/krdp
+18631ea6d4eb1942383d0d0aaed2199e0f0110c7	not-for-merge	'refs/backups/work-branch-work/d_ed/backend_after_auth-1786435715' of https://invent.kde.org/plasma/krdp
+0bde78fcf7d6042a1f35d099a34118ae3fb714ee	not-for-merge	'refs/backups/work-branch-work/d_ed/buttons-1778667375' of https://invent.kde.org/plasma/krdp
+fd8ee3c6f59f0fd745d412f7e366da96f0fede35	not-for-merge	'refs/backups/work-branch-work/d_ed/clipboard-1779884085' of https://invent.kde.org/plasma/krdp
+ea02751b9aa11a4a201e2f9aa68a040c3375a941	not-for-merge	'refs/backups/work-branch-work/d_ed/clipboard-1779884352' of https://invent.kde.org/plasma/krdp
+0d88e0dd8d603a08838dcaa105ef9f0cd62845c9	not-for-merge	'refs/backups/work-branch-work/d_ed/cursor-1777460489' of https://invent.kde.org/plasma/krdp
+c3fecef4b52aea6ac6cb69a4ab73874b8fcfd88c	not-for-merge	'refs/backups/work-branch-work/d_ed/damage-1787821612' of https://invent.kde.org/plasma/krdp
+de0b26079cb6ebd39aa9b858056821efdb907236	not-for-merge	'refs/backups/work-branch-work/d_ed/dynamic_progressive-1778671601' of https://invent.kde.org/plasma/krdp
+74ba4799c1a5f3cfe149609f1f105876a4c66351	not-for-merge	'refs/backups/work-branch-work/d_ed/dynamic_progressive-1778683175' of https://invent.kde.org/plasma/krdp
+0f15d2d23fb13a2e6626323b5fd795c7a78cd6e8	not-for-merge	'refs/backups/work-branch-work/d_ed/dynamic_progressive-1778683452' of https://invent.kde.org/plasma/krdp
+b98efc58b058552ec65b4f2f8b64c5ee22a8ea1d	not-for-merge	'refs/backups/work-branch-work/d_ed/dynamic_progressive-1778688726' of https://invent.kde.org/plasma/krdp
+769c61c4f0f87e51e011df948af246d471193dd2	not-for-merge	'refs/backups/work-branch-work/d_ed/fake_input_auth-1777579743' of https://invent.kde.org/plasma/krdp
+bd2162a7fd2da80e0c42fbe3adc03d19edcbe60d	not-for-merge	'refs/backups/work-branch-work/d_ed/fake_input_auth-1778017700' of https://invent.kde.org/plasma/krdp
+c6b32c1d5c1ddec42af58464e1d8b889892da2e3	not-for-merge	'refs/backups/work-branch-work/d_ed/fake_input_auth-1778018559' of https://invent.kde.org/plasma/krdp
+ca9cf1978b0e40e74b12d7b1ad6644ed8c49a1f2	not-for-merge	'refs/backups/work-branch-work/d_ed/faster_rdp-1714038381' of https://invent.kde.org/plasma/krdp
+1407a16c542ac3b9eb466d464c0a9235c03d25d2	not-for-merge	'refs/backups/work-branch-work/d_ed/faster_rdp-1714057505' of https://invent.kde.org/plasma/krdp
+a08faed14ef4fe1635ee04661cd211dbe03d22eb	not-for-merge	'refs/backups/work-branch-work/d_ed/faster_rdp-1714381491' of https://invent.kde.org/plasma/krdp
+dea2bfedd79148e01c2115102df1dd68654b809e	not-for-merge	'refs/backups/work-branch-work/d_ed/faster_rdp-1714381634' of https://invent.kde.org/plasma/krdp
+1381ac931a33dd3828bb478733b073f99249ae4e	not-for-merge	'refs/backups/work-branch-work/d_ed/fix_crash_after_free-1713873652' of https://invent.kde.org/plasma/krdp
+668672c506d9b9754e97a4e8507b6cbb58b5c050	not-for-merge	'refs/backups/work-branch-work/d_ed/fix_crash_after_free-1713875109' of https://invent.kde.org/plasma/krdp
+0df90508b2ad3eb7b56c722e6166b861b45636f3	not-for-merge	'refs/backups/work-branch-work/d_ed/h264_latency-1778515667' of https://invent.kde.org/plasma/krdp
+4a804087d679a81ef539002bb25199e70aa77fb9	not-for-merge	'refs/backups/work-branch-work/d_ed/h264_latency-1778605900' of https://invent.kde.org/plasma/krdp
+e85251011680f6507c86cc91c93a24e21398469f	not-for-merge	'refs/backups/work-branch-work/d_ed/h264_latency-1778606217' of https://invent.kde.org/plasma/krdp
+d399708d9336d9b60a38e7032ab7a8324e0aa680	not-for-merge	'refs/backups/work-branch-work/d_ed/h264_latency-1778663183' of https://invent.kde.org/plasma/krdp
+f27535117c2598b64ba32cc6ebb6a60bd808f014	not-for-merge	'refs/backups/work-branch-work/d_ed/header-1760693748' of https://invent.kde.org/plasma/krdp
+126afc7b4c143cd5482077070ed07ad04c056dcf	not-for-merge	'refs/backups/work-branch-work/d_ed/header-1760693892' of https://invent.kde.org/plasma/krdp
+4065da4127256b22259b5407569c36cbaa4acb8e	not-for-merge	'refs/backups/work-branch-work/d_ed/krdp_config-1730455935' of https://invent.kde.org/plasma/krdp
+332834b1ecbd2ce70744330d635fe0c9f371cd20	not-for-merge	'refs/backups/work-branch-work/d_ed/krdp_config-1730460594' of https://invent.kde.org/plasma/krdp
+33f26edd7106a4f09977dfa1e2ef79bd5a10571f	not-for-merge	'refs/backups/work-branch-work/d_ed/krdp_nla-1785749426' of https://invent.kde.org/plasma/krdp
+a5c6f5470cf75f27054296bf1a4aa3893006549f	not-for-merge	'refs/backups/work-branch-work/d_ed/krdp_nla-1785750918' of https://invent.kde.org/plasma/krdp
+1658e0f74b6b71588345f404b6ab542ce6acc072	not-for-merge	'refs/backups/work-branch-work/d_ed/krdp_refactor-1777566378' of https://invent.kde.org/plasma/krdp
+dbe1ed4dc88711313288542fffbfd063fff42332	not-for-merge	'refs/backups/work-branch-work/d_ed/krdp_refactor-1777567307' of https://invent.kde.org/plasma/krdp
+0df1306211b4ba75bbd6239aa8be41e53e8a1995	not-for-merge	'refs/backups/work-branch-work/d_ed/libei-1783590256' of https://invent.kde.org/plasma/krdp
+5579acbc8984b4914aba7126b25ee311391f00ec	not-for-merge	'refs/backups/work-branch-work/d_ed/libei-1783590932' of https://invent.kde.org/plasma/krdp
+0b27db88913a93b569f18360b17f5a6405c7a6ec	not-for-merge	'refs/backups/work-branch-work/d_ed/libei-1783597851' of https://invent.kde.org/plasma/krdp
+9c5abf6eda6a6edb5af7ac092f9bf4219b1c038f	not-for-merge	'refs/backups/work-branch-work/d_ed/libei-1783598174' of https://invent.kde.org/plasma/krdp
+fbfe729d0b673e130a32e21b35defbba2a3f8d1b	not-for-merge	'refs/backups/work-branch-work/d_ed/libei-1784193811' of https://invent.kde.org/plasma/krdp
+c53edd0d6147da0a84ef9a95bc8b4316215f4de2	not-for-merge	'refs/backups/work-branch-work/d_ed/libei-1785331223' of https://invent.kde.org/plasma/krdp
+2c720938847203f51c77b480bb8d4fe48442b3b8	not-for-merge	'refs/backups/work-branch-work/d_ed/libei-1785331458' of https://invent.kde.org/plasma/krdp
+093852bcbed0f259173b1f73864b06184a02173a	not-for-merge	'refs/backups/work-branch-work/d_ed/libei-1785332655' of https://invent.kde.org/plasma/krdp
+958cb7d6f79e533fe87985eeaf55b374bfbe09ae	not-for-merge	'refs/backups/work-branch-work/d_ed/libei-1786026966' of https://invent.kde.org/plasma/krdp
+749d0e09feac3bd0faa208ead3bede5547a886a4	not-for-merge	'refs/backups/work-branch-work/d_ed/libei-1786041839' of https://invent.kde.org/plasma/krdp
+f27384f07442a51ef0f0098f93652361c2a2e6e0	not-for-merge	'refs/backups/work-branch-work/d_ed/libei-1786116308' of https://invent.kde.org/plasma/krdp
+47a2a9b36a6b551919ff6aa6449c3cb87a73d94b	not-for-merge	'refs/backups/work-branch-work/d_ed/libei-1786351701' of https://invent.kde.org/plasma/krdp
+d2b68f1a3c02139f980a71da669f6fd3f3f6e6fd	not-for-merge	'refs/backups/work-branch-work/d_ed/libei-1786372919' of https://invent.kde.org/plasma/krdp
+5888c8ec1c53601bc6b2b053c9d79b1356d8ceb4	not-for-merge	'refs/backups/work-branch-work/d_ed/libei-1786436922' of https://invent.kde.org/plasma/krdp
+28d5ddb36064de3db324e2ef69feebcafc473c19	not-for-merge	'refs/backups/work-branch-work/d_ed/libei-1786437074' of https://invent.kde.org/plasma/krdp
+212bf37104afcb6a22c27cf735ad678fe2cefdb3	not-for-merge	'refs/backups/work-branch-work/d_ed/monitor-index-1777303086' of https://invent.kde.org/plasma/krdp
+a736708a81c71c7860390157b485540b8e4cb372	not-for-merge	'refs/backups/work-branch-work/d_ed/monitor-index-1777303996' of https://invent.kde.org/plasma/krdp
+a39a42d2be6ea11d5ffdd2561fb9083a630c8ec2	not-for-merge	'refs/backups/work-branch-work/d_ed/monitor_resizing-1753178456' of https://invent.kde.org/plasma/krdp
+4510316daa0190eb9a23eef4ae9c15fb72d38a5b	not-for-merge	'refs/backups/work-branch-work/d_ed/monitor_resizing-1753179364' of https://invent.kde.org/plasma/krdp
+eed4784cdeb2d53d485181b0ae17e1e4b06d2889	not-for-merge	'refs/backups/work-branch-work/d_ed/monitor_resizing-1782470880' of https://invent.kde.org/plasma/krdp
+4fa21619a7fa3c6b60424827903d1d73ff8034e2	not-for-merge	'refs/backups/work-branch-work/d_ed/monitor_resizing-1782470973' of https://invent.kde.org/plasma/krdp
+d0e5d1dd56dd8bb5289a0dbeadce41b8bb067eb3	not-for-merge	'refs/backups/work-branch-work/d_ed/monitor_resizing-1783066746' of https://invent.kde.org/plasma/krdp
+9ca4fa9aecf19405762250c4843a643a6c28a294	not-for-merge	'refs/backups/work-branch-work/d_ed/monitor_resizing-1783067600' of https://invent.kde.org/plasma/krdp
+693b7e7cbf4d90910654c3b5217903a275315102	not-for-merge	'refs/backups/work-branch-work/d_ed/monitor_resizing-1783343849' of https://invent.kde.org/plasma/krdp
+91a05cfaa3b60cf77061bb73946c7e4c59feea85	not-for-merge	'refs/backups/work-branch-work/d_ed/monitor_resizing-1783449225' of https://invent.kde.org/plasma/krdp
+378b6555a96a78d9f86ad872cf7725d2ff94a940	not-for-merge	'refs/backups/work-branch-work/d_ed/monitor_resizing-1783450330' of https://invent.kde.org/plasma/krdp
+74fe85e8eb9b229c51f76b9945a964f5f7baa3ad	not-for-merge	'refs/backups/work-branch-work/d_ed/monitor_resizing-1783546363' of https://invent.kde.org/plasma/krdp
+10cdb15511ea052a680d6cdd65ceb48f39f29849	not-for-merge	'refs/backups/work-branch-work/d_ed/monitor_resizing-1783590509' of https://invent.kde.org/plasma/krdp
+3f12de74521db12b9febc8e9e4c451469e31e66a	not-for-merge	'refs/backups/work-branch-work/d_ed/monitor_resizing-1783591759' of https://invent.kde.org/plasma/krdp
+d2a2b1f276072b4bda32d13c0eace3abff790b2a	not-for-merge	'refs/backups/work-branch-work/d_ed/monitor_size-1789390921' of https://invent.kde.org/plasma/krdp
+3641ed81c3f83ef27d784ef837634b64147866a5	not-for-merge	'refs/backups/work-branch-work/d_ed/mouse-1778666611' of https://invent.kde.org/plasma/krdp
+24cf1c136613655ce24fb0f501858f4df2476e48	not-for-merge	'refs/backups/work-branch-work/d_ed/mouse-1778671396' of https://invent.kde.org/plasma/krdp
+9c97b2e386a43200aee53128f0c3a735fe7d1b2d	not-for-merge	'refs/backups/work-branch-work/d_ed/mouse-1778673627' of https://invent.kde.org/plasma/krdp
+3782b644e10e1d402a0d84c6ffffd8c763ca7c97	not-for-merge	'refs/backups/work-branch-work/d_ed/no_mandatory_systemd-1769683064' of https://invent.kde.org/plasma/krdp
+72f53e64473c66a5a03fba2e1bdfb1867b0c6d66	not-for-merge	'refs/backups/work-branch-work/d_ed/no_mandatory_systemd-1769687650' of https://invent.kde.org/plasma/krdp
+d82811b633cfac41b75214438a4dbbb686cf3cfe	not-for-merge	'refs/backups/work-branch-work/d_ed/operating_mode-1786344369' of https://invent.kde.org/plasma/krdp
+dec5a505d9a5113e6fcf465960182807ad3c1712	not-for-merge	'refs/backups/work-branch-work/d_ed/operating_mode-1786440424' of https://invent.kde.org/plasma/krdp
+485abaf0d80388a79dbcbd7215377fffe0498a92	not-for-merge	'refs/backups/work-branch-work/d_ed/operating_mode-1786445466' of https://invent.kde.org/plasma/krdp
+c8de94c9179fd9656b4e3dae7fef40241ed69124	not-for-merge	'refs/backups/work-branch-work/d_ed/operating_mode-1786973803' of https://invent.kde.org/plasma/krdp
+a273e3b081fb7318c110afb6a25de856a6f4cb40	not-for-merge	'refs/backups/work-branch-work/d_ed/operating_mode-1787865758' of https://invent.kde.org/plasma/krdp
+09fa5e18b42106f1c3e58642a9e180bea5b21a09	not-for-merge	'refs/backups/work-branch-work/d_ed/operating_mode-1787929816' of https://invent.kde.org/plasma/krdp
+5b3afd3979ec166b174568b8f3e03cfea127fb31	not-for-merge	'refs/backups/work-branch-work/d_ed/operating_mode-1788270893' of https://invent.kde.org/plasma/krdp
+844e7b02f426cf01f5a1c6460e950f1b03ed496b	not-for-merge	'refs/backups/work-branch-work/d_ed/operating_mode-1788271046' of https://invent.kde.org/plasma/krdp
+3ae1273e6bdfa9297da1e4a7043f477199422d08	not-for-merge	'refs/backups/work-branch-work/d_ed/pam-1752148861' of https://invent.kde.org/plasma/krdp
+37669b223339d3482779aba5e003988aecdc8fa6	not-for-merge	'refs/backups/work-branch-work/d_ed/pam-1756330753' of https://invent.kde.org/plasma/krdp
+de60c287929d493f534ab03851a8e5af48cd85a6	not-for-merge	'refs/backups/work-branch-work/d_ed/pam-1756828441' of https://invent.kde.org/plasma/krdp
+80af4799c73aa782a656ce9e0c8e235121c588c3	not-for-merge	'refs/backups/work-branch-work/d_ed/pam-1756994552' of https://invent.kde.org/plasma/krdp
+e6752ddfb14ec0a4acf90f28a7faec3723e4bf11	not-for-merge	'refs/backups/work-branch-work/d_ed/pam-1756994755' of https://invent.kde.org/plasma/krdp
+eb9ada723848a36c59af3a631f5106f027794c89	not-for-merge	'refs/backups/work-branch-work/d_ed/pam-1756994978' of https://invent.kde.org/plasma/krdp
+318cc2842eff8445b6a6718d5262a7366eba9f05	not-for-merge	'refs/backups/work-branch-work/d_ed/pam-1756995939' of https://invent.kde.org/plasma/krdp
+b64b9a308520562a7a65723215dfa3fe2d15b0c2	not-for-merge	'refs/backups/work-branch-work/d_ed/pam_at_login-1780924237' of https://invent.kde.org/plasma/krdp
+83341f2a9000e6272b0070ce8bcfb933fa21248d	not-for-merge	'refs/backups/work-branch-work/d_ed/pam_at_login-1781007598' of https://invent.kde.org/plasma/krdp
+0535fbd2d9e1924e1e45ba25039e0b889624066f	not-for-merge	'refs/backups/work-branch-work/d_ed/pam_at_login-1781007943' of https://invent.kde.org/plasma/krdp
+a8fcdee9a779c837418f7e62d26c4023abcef5d4	not-for-merge	'refs/backups/work-branch-work/d_ed/pam_fix-1782397259' of https://invent.kde.org/plasma/krdp
+981319d36b88200dd413a9a5052717189e524581	not-for-merge	'refs/backups/work-branch-work/d_ed/pam_fix-1782401614' of https://invent.kde.org/plasma/krdp
+acb7cfa36d12bc7e1595080e8ea24822d02e27f0	not-for-merge	'refs/backups/work-branch-work/d_ed/plasma-ei-1792075486' of https://invent.kde.org/plasma/krdp
+3f16f303260ad5e1bf8389072fcbf7f12c6e0d23	not-for-merge	'refs/backups/work-branch-work/d_ed/plasma-ei-1792159633' of https://invent.kde.org/plasma/krdp
+429f584ce34bffac76c546ccfc7bebc47eb9ee8f	not-for-merge	'refs/backups/work-branch-work/d_ed/plasma_screencast-1775067993' of https://invent.kde.org/plasma/krdp
+16f80ce75642d7548a43451c234b21b2082c9296	not-for-merge	'refs/backups/work-branch-work/d_ed/raster_fast-1777473735' of https://invent.kde.org/plasma/krdp
+9fc3c1d2da6203d8281a225655ec114234d13bd7	not-for-merge	'refs/backups/work-branch-work/d_ed/raster_fast-1777474563' of https://invent.kde.org/plasma/krdp
+3e48c264fb26069763398dd37a69db1f688e44e0	not-for-merge	'refs/backups/work-branch-work/d_ed/raster_fast-1777476509' of https://invent.kde.org/plasma/krdp
+6feb01fe689c09c70c665f9a5a5dfcfbed7247a1	not-for-merge	'refs/backups/work-branch-work/d_ed/raster_fast-1777570636' of https://invent.kde.org/plasma/krdp
+249f453767379fe0c75dd57448583516922ab18a	not-for-merge	'refs/backups/work-branch-work/d_ed/raster_fast-1777587860' of https://invent.kde.org/plasma/krdp
+3fda1f205768bb06d6705980f2a2123da8ae43af	not-for-merge	'refs/backups/work-branch-work/d_ed/raster_fast-1777651404' of https://invent.kde.org/plasma/krdp
+0d0546e471d20d7c9a3faa9cdb7d812160a27d4c	not-for-merge	'refs/backups/work-branch-work/d_ed/raster_fast-1777652083' of https://invent.kde.org/plasma/krdp
+fc6407d65be177da2199164035ea87c4f35c7d24	not-for-merge	'refs/backups/work-branch-work/d_ed/raster_fast-1778516426' of https://invent.kde.org/plasma/krdp
+0e65157be9efd6473db7d1ae54e02421d7242b08	not-for-merge	'refs/backups/work-branch-work/d_ed/raster_fast-1778584490' of https://invent.kde.org/plasma/krdp
+b6ec8bdb7000c6e5f07c75ce3eb0917dc06527a4	not-for-merge	'refs/backups/work-branch-work/d_ed/raster_fast-1778584549' of https://invent.kde.org/plasma/krdp
+49fbbac6d57baf9a31a957120f7bc3eb5fbc1ddb	not-for-merge	'refs/backups/work-branch-work/d_ed/raster_fast-1778584704' of https://invent.kde.org/plasma/krdp
+29f4b1db73b04cb6f820e3c39714e8ca4089f5f5	not-for-merge	'refs/backups/work-branch-work/d_ed/raster_fast-1778593014' of https://invent.kde.org/plasma/krdp
+b879acb43a8ec82f0dd9cb5be494a678896f8e17	not-for-merge	'refs/backups/work-branch-work/d_ed/raster_fast-1778601355' of https://invent.kde.org/plasma/krdp
+c775a2917c85638f1d87733597949c3d5817512d	not-for-merge	'refs/backups/work-branch-work/d_ed/rdp_token-1746718721' of https://invent.kde.org/plasma/krdp
+098319b1fdc66aaceaeeca52f326ab1bd0415d27	not-for-merge	'refs/backups/work-branch-work/d_ed/rdp_token-1747042534' of https://invent.kde.org/plasma/krdp
+4508dddb57c3bcb0b35aeb2d63e8476e2e2bf3b7	not-for-merge	'refs/backups/work-branch-work/d_ed/rdp_token-1747047471' of https://invent.kde.org/plasma/krdp
+413e8ef075110419ca5ccb9c901e69bbd0c4d77e	not-for-merge	'refs/backups/work-branch-work/d_ed/rdp_token-1747047487' of https://invent.kde.org/plasma/krdp
+e2a18072fe44f8728fa5d3c7372fba031e7c57f0	not-for-merge	'refs/backups/work-branch-work/d_ed/rdp_token-1747051822' of https://invent.kde.org/plasma/krdp
+05ce53503a67dd4424d9ac35c9618d70f5d3a1e7	not-for-merge	'refs/backups/work-branch-work/d_ed/sections-1760692050' of https://invent.kde.org/plasma/krdp
+0beb073ce1d7d49af4908b5062cd72246785c937	not-for-merge	'refs/backups/work-branch-work/d_ed/sections-1760692812' of https://invent.kde.org/plasma/krdp
+80e888c45a71b7967772433a6e65239cb7bc86dd	not-for-merge	'refs/backups/work-branch-work/d_ed/stateconfig-1730474374' of https://invent.kde.org/plasma/krdp
+f207d93bcbfa5998c0074cd20e5649477ebe64d4	not-for-merge	'refs/backups/work-branch-work/d_ed/stateconfig-1731498666' of https://invent.kde.org/plasma/krdp
+04e7b4c8f05e3d11567da26888a38f83233944b4	not-for-merge	'refs/backups/work-branch-work/d_ed/stateconfig-1731498714' of https://invent.kde.org/plasma/krdp
+60db4c2654061ad586ff8e8a175bcbd60e47aca7	not-for-merge	'refs/backups/work-branch-work/d_ed/stream_change-1752148835' of https://invent.kde.org/plasma/krdp
+a66534a23f77b8ac754703838cbaace2c7e7a483	not-for-merge	'refs/backups/work-branch-work/d_ed/stream_change-1753284653' of https://invent.kde.org/plasma/krdp
+e53a0de7219c7bbee6c6e7eaf4764c520f85515b	not-for-merge	'refs/backups/work-branch-work/d_ed/stream_change-1753285086' of https://invent.kde.org/plasma/krdp
+ff523ce4b83be03c7638ac6aa6d8cd7c4dc69914	not-for-merge	'refs/backups/work-branch-work/d_ed/streamer-1785787253' of https://invent.kde.org/plasma/krdp
+e728f2b5c6d45889ba2ebae28b54d856aa527e6f	not-for-merge	'refs/backups/work-branch-work/d_ed/streamer-1785787622' of https://invent.kde.org/plasma/krdp
+7464b622fb0360487a67b41d407db39e4f5aba9d	not-for-merge	'refs/backups/work-branch-work/d_ed/streamer-1785788188' of https://invent.kde.org/plasma/krdp
+2a7bab2e19afe2d639539fc0f09b57f4001b7567	not-for-merge	'refs/backups/work-branch-work/d_ed/streamer_fix-1746105676' of https://invent.kde.org/plasma/krdp
+f327defee77644aa1933d535487077c507c3f74e	not-for-merge	'refs/backups/work-branch-work/d_ed/system_user_editable-1760691979' of https://invent.kde.org/plasma/krdp
+dccbbdb04b7de7b60cda40c6c9877d7c9cf600e1	not-for-merge	'refs/backups/work-branch-work/d_ed/systemd-1737969493' of https://invent.kde.org/plasma/krdp
+df4d9d4ea68cccb35da0a5b55a32652c58b54acd	not-for-merge	'refs/backups/work-branch-work/d_ed/systemd-1737971481' of https://invent.kde.org/plasma/krdp
+1776d388d7e4438b1b8bb33bd7b6a18f8bb358f6	not-for-merge	'refs/backups/work-branch-work/d_ed/systemd-1751293722' of https://invent.kde.org/plasma/krdp
+ad393302a1e17889067fd139c28962b4b3791fc1	not-for-merge	'refs/backups/work-branch-work/d_ed/systemd_up-1739799431' of https://invent.kde.org/plasma/krdp
+51b8381a9462487fe2f6d80bcec9def600add46a	not-for-merge	'refs/backups/work-branch-work/d_ed/thread-1782394065' of https://invent.kde.org/plasma/krdp
+2752988b2a6c1781a8b76f93dd3f88c9ce622fc1	not-for-merge	'refs/backups/work-branch-work/d_ed/thread-1782394212' of https://invent.kde.org/plasma/krdp
+3e6d8b1a261c37464debe3888c076a838008b918	not-for-merge	'refs/backups/work-branch-work/d_ed/thread-1782402605' of https://invent.kde.org/plasma/krdp
+a12c7d4fa9d80d833b96cee30313760f589adc38	not-for-merge	'refs/backups/work-branch-work/d_ed/thread-1782467581' of https://invent.kde.org/plasma/krdp
+4e2e4e1fde55c461164b2a7fee9d14b5e973f4d7	not-for-merge	'refs/backups/work-branch-work/d_ed/timing-1787572328' of https://invent.kde.org/plasma/krdp
+ddd439989d0cb84ae5e866f09ab8ef3b4c0dab73	not-for-merge	'refs/backups/work-branch-work/d_ed/version_number-1792140783' of https://invent.kde.org/plasma/krdp
+97634059d4084a4d6ced167feacf411fbca410ad	not-for-merge	'refs/backups/work-branch-work/d_ed/version_number-1792142547' of https://invent.kde.org/plasma/krdp
+fdc73d9055dae4879da969a4335adc1971efe273	not-for-merge	'refs/backups/work-branch-work/d_ed/videostreamsurface-1787589231' of https://invent.kde.org/plasma/krdp
+5d95c03689b867ead8809a7eca07d3392d024c18	not-for-merge	'refs/backups/work-branch-work/d_ed/videostreamsurface-1787674173' of https://invent.kde.org/plasma/krdp
+bbf2d673f138c3a400994296bf37b35359ffd90a	not-for-merge	'refs/backups/work-branch-work/d_ed/videostreamsurface-1787866331' of https://invent.kde.org/plasma/krdp
+a747219cea7e492b6ebde83de76e1453c654c3e1	not-for-merge	'refs/backups/work-branch-work/d_ed/videostreamsurface-1788279729' of https://invent.kde.org/plasma/krdp
+c3f7326fb02781b0a8897e013ca2073b0a120949	not-for-merge	'refs/backups/work-branch-work/d_ed/videostreamsurface-1788882963' of https://invent.kde.org/plasma/krdp
+50120646f8d999dbecfca78dc259aa3922e2e5d1	not-for-merge	'refs/backups/work-branch-work/d_ed/videostreamsurface-1788884601' of https://invent.kde.org/plasma/krdp
+9b5587ac21bb13dee878913990d1093a5f2f5d89	not-for-merge	'refs/backups/work-branch-work/d_ed/videostreamsurface2-1788885298' of https://invent.kde.org/plasma/krdp
+664dce2b5bc111c70975d048d63de93d956eccf3	not-for-merge	'refs/backups/work-branch-work/d_ed/videostreamsurface2-1788885346' of https://invent.kde.org/plasma/krdp
+07962a1a3636d979f41fb5cb98a96fbff8a0d08c	not-for-merge	'refs/backups/work-branch-work/d_ed/videostreamsurface2-1788885536' of https://invent.kde.org/plasma/krdp
+fc05345decbf70ecf88e8a918d02cbc4baab9c21	not-for-merge	'refs/backups/work-branch-work/d_ed/videostreamsurface2-1789050448' of https://invent.kde.org/plasma/krdp
+baa110c6d655f190d49166a668ac0230dd0b9130	not-for-merge	'refs/backups/work-branch-work/d_ed/videostreamsurface2-1789051542' of https://invent.kde.org/plasma/krdp
+f2ae1b6e5d6c082bc3709383c07cacdb9fc27c32	not-for-merge	'refs/backups/work-branch-work/d_ed/vroom-1787754921' of https://invent.kde.org/plasma/krdp
+67844e85033bf03e0cf88c66b9a918ac5f3f716d	not-for-merge	'refs/backups/work-branch-work/d_ed/vroom-1788777706' of https://invent.kde.org/plasma/krdp
+e0c54608875e5ae97f70729ea7b89f2bdda845ce	not-for-merge	'refs/backups/work-branch-work/d_ed/vroom-1788783732' of https://invent.kde.org/plasma/krdp
+bdfed56bbe8acdaf1e868a5b99fe7ca98c4ccdad	not-for-merge	'refs/backups/work-branch-work/d_ed/vroom-1788786562' of https://invent.kde.org/plasma/krdp
+2e749fa0a97b8a408017a3281bc6ad36aba0273b	not-for-merge	'refs/backups/work-branch-work/d_ed/vroom-1788787797' of https://invent.kde.org/plasma/krdp
+96af3294f4dbe9ae0f59ae6c5efbb2967fcbc5ec	not-for-merge	'refs/backups/work-branch-work/d_ed/vroom-1788787929' of https://invent.kde.org/plasma/krdp
+d4f829e3690f582627d2540b5445f7851bd6bb34	not-for-merge	'refs/backups/work-branch-work/d_ed/vroom-1788794995' of https://invent.kde.org/plasma/krdp
+d3b06515f0ae797733c0175a4775eaa73e7af02f	not-for-merge	'refs/backups/work-branch-work/d_ed/vroom-1788796161' of https://invent.kde.org/plasma/krdp
+755d9f813214e0bf178c7162a59d5f5b3afe2a8a	not-for-merge	'refs/backups/work-branch-work/d_ed_akseli/downscaling-1714664156' of https://invent.kde.org/plasma/krdp
+8412d05016d709025c7882dcf8d3f9ff1d11c68a	not-for-merge	'refs/backups/work-branch-work/davidre/67flatpak-1722604482' of https://invent.kde.org/plasma/krdp
+d12784b5319b97a25836739e638800c42d0e8ca1	not-for-merge	'refs/backups/work-branch-work/davidre/movedesktopfile-1748023825' of https://invent.kde.org/plasma/krdp
+1a2d3b77afdeea73472e71a3211b03cd6e86d1dc	not-for-merge	'refs/backups/work-branch-work/davidre/movedesktopfile-1748330545' of https://invent.kde.org/plasma/krdp
+0cf6b59380a12334b352258c342ba772bb30762a	not-for-merge	'refs/backups/work-branch-work/davidre/movedesktopfile-1748872374' of https://invent.kde.org/plasma/krdp
+75dbd3617aff50fd16d6c68cfed6a526cefd669d	not-for-merge	'refs/backups/work-branch-work/davidre/movedesktopfile-1748960068' of https://invent.kde.org/plasma/krdp
+e20a7d7ea4c4d1ba5a650f0c9e994a2bc765bab9	not-for-merge	'refs/backups/work-branch-work/davidre/private-code-1772445593' of https://invent.kde.org/plasma/krdp
+08f26ea40090420cc3ed6a1f90b0829c0896e649	not-for-merge	'refs/backups/work-branch-work/davidre/privatecode-1723879203' of https://invent.kde.org/plasma/krdp
+6906714d3f50489c09eee63ca17f166fc67ed33d	not-for-merge	'refs/backups/work-branch-work/davidre/privatecode-1723879257' of https://invent.kde.org/plasma/krdp
+a011c5434c5b8a759c915ca2d5e61c9314c33d1f	not-for-merge	'refs/backups/work-branch-work/fix_cmake_warnings-1774542532' of https://invent.kde.org/plasma/krdp
+95bd4dbabc516ad89b8ba3069206322a8ae7e9fe	not-for-merge	'refs/backups/work-branch-work/fvogt/instpo-1716754435' of https://invent.kde.org/plasma/krdp
+fc6491c3a68dcb2aded45da7d88576dcb7ec19f8	not-for-merge	'refs/backups/work-branch-work/fvogt/properstart-1721471412' of https://invent.kde.org/plasma/krdp
+60e4a3adf45dcfc8aa8fd4f4e53b9b92ecbb831c	not-for-merge	'refs/backups/work-branch-work/graesslin/no-new-privs-systemd-1778867269' of https://invent.kde.org/plasma/krdp
+8e1de600a6ea4fcb1662508626da2cf0499f9734	not-for-merge	'refs/backups/work-branch-work/graesslin/no-new-privs-systemd-1778926987' of https://invent.kde.org/plasma/krdp
+df3166eb5bdfafe74824a4b2bc8f2edee0a85dd4	not-for-merge	'refs/backups/work-branch-work/make_compile_without_kf_6_12-1742991566' of https://invent.kde.org/plasma/krdp
+7e602980bf4a6385a4031582226d6975f54f7603	not-for-merge	'refs/backups/work-branch-work/ngraham/add-linting-1755454592' of https://invent.kde.org/plasma/krdp
+157d5e11db2052d30003275d8ad65e41b9dc297e	not-for-merge	'refs/backups/work-branch-work/ngraham/better-header-1785368633' of https://invent.kde.org/plasma/krdp
+82ea9468129f66c5c065a4d8492b0545b56c5b64	not-for-merge	'refs/backups/work-branch-work/ngraham/better-header-1785405183' of https://invent.kde.org/plasma/krdp
+8c2b26a03f25be1d123c3eaf8b2ad3e05f039b37	not-for-merge	'refs/backups/work-branch-work/ngraham/better-header-1785406638' of https://invent.kde.org/plasma/krdp
+cc878d6a6f5a671c194bf50a3ccd7de6556947c3	not-for-merge	'refs/backups/work-branch-work/ngraham/better-messages-1785370302' of https://invent.kde.org/plasma/krdp
+027bbcd54dbdad798a92bd0c1178067d8174b400	not-for-merge	'refs/backups/work-branch-work/ngraham/better-messages-1785416659' of https://invent.kde.org/plasma/krdp
+06d5e6f0950afeab803dd108ae68d1020b2467d7	not-for-merge	'refs/backups/work-branch-work/ngraham/better-messages-1785417004' of https://invent.kde.org/plasma/krdp
+829df4f9ceaeaa46fea65a721c7c2f1d2d62675f	not-for-merge	'refs/backups/work-branch-work/ngraham/fix-docs-1686244243' of https://invent.kde.org/plasma/krdp
+14404aaeef14991b546afc8ff687e46df9050149	not-for-merge	'refs/backups/work-branch-work/ngraham/higify-it-1720132991' of https://invent.kde.org/plasma/krdp
+be6b3dcf7ef07b0d08780de57a35ec2ecca269da	not-for-merge	'refs/backups/work-branch-work/ngraham/inform-when-ready-1686568335' of https://invent.kde.org/plasma/krdp
+965e205c1f4cd0a37e1ea744312d64c4cf8a42fe	not-for-merge	'refs/backups/work-branch-work/ngraham/inform-when-ready-1686568457' of https://invent.kde.org/plasma/krdp
+41100d31a0c2db12866cf4206c8e53cd96e44d79	not-for-merge	'refs/backups/work-branch-work/ngraham/polishing-and-fixing-1715268339' of https://invent.kde.org/plasma/krdp
+09fde3d95b86794b1cb4e7856fde459baf082ea2	not-for-merge	'refs/backups/work-branch-work/ngraham/polishing-and-fixing-1715269012' of https://invent.kde.org/plasma/krdp
+b370b6f885bb0c99b3d29d330b2e68f88f2368ed	not-for-merge	'refs/backups/work-branch-work/ngraham/polishing-and-fixing-1715699976' of https://invent.kde.org/plasma/krdp
+4576c455454cb3f28391eea6c2b64c795957b8d1	not-for-merge	'refs/backups/work-branch-work/ngraham/polishing-and-fixing-1715700473' of https://invent.kde.org/plasma/krdp
+7e51d413ed389b2a32849209d049549306ae978d	not-for-merge	'refs/backups/work-branch-work/ngraham/put-it-in-security-privacy-1770614324' of https://invent.kde.org/plasma/krdp
+6fc884b42ca744acb3f058cc6db9a687706dd553	not-for-merge	'refs/backups/work-branch-work/ngraham/put-it-in-security-privacy-1770614990' of https://invent.kde.org/plasma/krdp
+31c1f77c4db654ee4221a06dab47b5fb92c5da1b	not-for-merge	'refs/backups/work-branch-work/ngraham/refactor-delegates-1760969172' of https://invent.kde.org/plasma/krdp
+c27051667715f073a9629ca9acdf3742083d3d2f	not-for-merge	'refs/backups/work-branch-work/ngraham/refactor-delegates-1760972238' of https://invent.kde.org/plasma/krdp
+0059cec9d23d131aac4f86918c88b0ee7cd2ca5b	not-for-merge	'refs/backups/work-branch-work/ngraham/remove-flatpak-1755614349' of https://invent.kde.org/plasma/krdp
+60391b4acd52df5524347b779503ef2a8c73f528	not-for-merge	'refs/backups/work-branch-work/ngraham/require-passing-tests-everywhere-1755615993' of https://invent.kde.org/plasma/krdp
+9c6ea0f03ad79e7cdafdac278e79adc84bffb9e0	not-for-merge	'refs/backups/work-branch-work/ngraham/ship-a-preset-to-disable-it-by-default-1755702892' of https://invent.kde.org/plasma/krdp
+6bcea653c7e67627deb4f91673251aa7df19b9c6	not-for-merge	'refs/backups/work-branch-work/ngraham/title-case-for-section-headers-1760708207' of https://invent.kde.org/plasma/krdp
+aa3beebf43458fbf7954bfc98b4c2acf3350cb0a	not-for-merge	'refs/backups/work-branch-work/ngraham/toggle-on-click-1760708666' of https://invent.kde.org/plasma/krdp
+10d0a25a24f99780d6a4212c076aa5aae40d0abe	not-for-merge	'refs/backups/work-branch-work/ngraham/toggle-on-click-1760708730' of https://invent.kde.org/plasma/krdp
+6eaa9e02f3383c1a6b0e8f9bf1a120861f6490d4	not-for-merge	'refs/backups/work-branch-work/ngraham/use-highlighting-properly-1760708819' of https://invent.kde.org/plasma/krdp
+1ae16cd07b8748eb1852cca6270f42f0ef434140	not-for-merge	'refs/backups/work-branch-work/ngraham/use-highlighting-properly-1760709004' of https://invent.kde.org/plasma/krdp
+631d5afe4b446cfffbb24c3584e29d98a2f40d9c	not-for-merge	'refs/backups/work-branch-work/ngraham/wide-separators-1760709053' of https://invent.kde.org/plasma/krdp
+fc424a4ad75496963421c8bdc22442b47ac9126c	not-for-merge	'refs/backups/work-branch-work/ngraham/wide-separators-1760709121' of https://invent.kde.org/plasma/krdp
+c0a5761b2c5e05d6fb835487a43566e5e60ef527	not-for-merge	'refs/backups/work-branch-work/nico/crash-1723050762' of https://invent.kde.org/plasma/krdp
+d26b351b2d0b9c614340e7acd4c09b54122bd9f2	not-for-merge	'refs/backups/work-branch-work/nico/desktop-file-1731763242' of https://invent.kde.org/plasma/krdp
+3f7fd59dde7da5e3bc66f03cb4175cf97567a879	not-for-merge	'refs/backups/work-branch-work/nico/flatpak-1730669104' of https://invent.kde.org/plasma/krdp
+4e96af1f7441b81161fab005049824ecb143b686	not-for-merge	'refs/backups/work-branch-work/nico/logging-1778244951' of https://invent.kde.org/plasma/krdp
+7844a7f0e3dfa6db3943f6caba67b5c21222df54	not-for-merge	'refs/backups/work-branch-work/nico/private-fix-1738161765' of https://invent.kde.org/plasma/krdp
+b2c88c9ac3c758e837cfa77dbef78e2dfce56072	not-for-merge	'refs/backups/work-branch-work/nico/smoke-1777661186' of https://invent.kde.org/plasma/krdp
+71c6d17716317dcd09a53e9d4d693d5b9db446d9	not-for-merge	'refs/backups/work-branch-work/nico/smoke-1777738071' of https://invent.kde.org/plasma/krdp
+9eb7e3af090d1dafa51e37ca9777dbce5d3a56e0	not-for-merge	'refs/backups/work-branch-work/nmariusp/systemd_capitalization-1775642112' of https://invent.kde.org/plasma/krdp
+6055279d8bc65ef810591584ea7391194f06c2a7	not-for-merge	'refs/backups/work-branch-work/olib-tp/kcm-kirigami-form-1788263888' of https://invent.kde.org/plasma/krdp
+9ae38a614dd1632d9c7ab6abd371178fd98c096c	not-for-merge	'refs/backups/work-branch-work/olib-tp/kcm-kirigami-form-1788264266' of https://invent.kde.org/plasma/krdp
+b3b616624bd7d5aedf0acf235e04fa8e4b758368	not-for-merge	'refs/backups/work-branch-work/olib-tp/kcm-kirigami-form-1788264429' of https://invent.kde.org/plasma/krdp
+36d8b43caf41f27ded028cf641072034989470a3	not-for-merge	'refs/backups/work-branch-work/olib-tp/kcm-kirigami-form-1788267522' of https://invent.kde.org/plasma/krdp
+a8f565ac936c1df5c104acae3976cc52dcacad0b	not-for-merge	'refs/backups/work-branch-work/olib-tp/kcm-kirigami-form-1788268353' of https://invent.kde.org/plasma/krdp
+93306a74c107054d5e4c9ee12155bc8ed9f80531	not-for-merge	'refs/backups/work-branch-work/olib-tp/kcm-kirigami-form-1788271134' of https://invent.kde.org/plasma/krdp
+89fbfb0cb4c944b1228a272b480ad4591d9917d9	not-for-merge	'refs/backups/work-branch-work/olib-tp/kcm-kirigami-form-1788271640' of https://invent.kde.org/plasma/krdp
+bd08072e87a353201f238719dfc7f3a31365a76e	not-for-merge	'refs/backups/work-branch-work/olib-tp/kcm-kirigami-form-1788282137' of https://invent.kde.org/plasma/krdp
+681f2600ea50c3fde0dcd68c7632828d3ebf1852	not-for-merge	'refs/backups/work-branch-work/olib-tp/kcm-kirigami-form-1788285652' of https://invent.kde.org/plasma/krdp
+bc804752897b0fdde3f1fa06b5240ea7984afec1	not-for-merge	'refs/backups/work-branch-work/olib-tp/kcm-kirigami-form-1788285708' of https://invent.kde.org/plasma/krdp
+2c32010f699deb254af62e4145029af0bc06c7f6	not-for-merge	'refs/backups/work-branch-work/olib-tp/kcm-kirigami-form-1788286395' of https://invent.kde.org/plasma/krdp
+17f35815effaa1baee32a7bf9e4d7279c2ec3dd7	not-for-merge	'refs/backups/work-branch-work/olib-tp/krdp-daemon-1787740359' of https://invent.kde.org/plasma/krdp
+2ee3cdd694f97cbfc4a140f357b73a5581236a4e	not-for-merge	'refs/backups/work-branch-work/olib-tp/krdp-daemon-1787740608' of https://invent.kde.org/plasma/krdp
+597b0d484b6b3569c0fcf898163fc6550e1c42d4	not-for-merge	'refs/backups/work-branch-work/olib-tp/krdp-daemon-1787743411' of https://invent.kde.org/plasma/krdp
+1484a60fd8dd1ae24fe2d937ae9fe91b9c85d7f3	not-for-merge	'refs/backups/work-branch-work/olib-tp/krdp-daemon-split-code-1788450310' of https://invent.kde.org/plasma/krdp
+f42f0b392cac91e975c8f84b96c867d8b03a9cae	not-for-merge	'refs/backups/work-branch-work/olib-tp/krdp-server-cert-1792098031' of https://invent.kde.org/plasma/krdp
+8284c151e4ce9d8017229b2198b5978401f1bd65	not-for-merge	'refs/backups/work-branch-work/olib-tp/krdp-server-cert-1792098594' of https://invent.kde.org/plasma/krdp
+76b12bf7408667ab252e0b78d7fc5470163aa8fd	not-for-merge	'refs/backups/work-branch-work/olib-tp/krdp-server-cert-1792098837' of https://invent.kde.org/plasma/krdp
+83ba1451d2961e91965c857454e6ce3e30c829e0	not-for-merge	'refs/backups/work-branch-work/olib-tp/krdp-server-cert-1792098852' of https://invent.kde.org/plasma/krdp
+2765ab5d8e6549f397214d6cdcfcb398ccd00ffc	not-for-merge	'refs/backups/work-branch-work/olib-tp/krdp-server-cert-1792099051' of https://invent.kde.org/plasma/krdp
+85e940f11682fc744a27a82e8f8d50298ea0d9a5	not-for-merge	'refs/backups/work-branch-work/olib-tp/krdp-server-cert-1792153679' of https://invent.kde.org/plasma/krdp
+ba7f59e27a66059235855807a0f34321fc3c998b	not-for-merge	'refs/backups/work-branch-work/olib-tp/krdp-server-cert-1792154300' of https://invent.kde.org/plasma/krdp
+7ee5cd42f78d30b0d970ee4366792292d2c20ecc	not-for-merge	'refs/backups/work-branch-work/olib-tp/progressive-close-1790788994' of https://invent.kde.org/plasma/krdp
+ff92bcfaa768164e5e0926f6875ccbd50168b8b0	not-for-merge	'refs/backups/work-branch-work/persist-1694070382' of https://invent.kde.org/plasma/krdp
+4e1f5f53a8d0d824c203f228cbb6b665045ab171	not-for-merge	'refs/backups/work-branch-work/persist-1707912758' of https://invent.kde.org/plasma/krdp
+3e63cf8418b8253b79312c9ebf9c058435589e8e	not-for-merge	'refs/backups/work-branch-work/persist-1712065505' of https://invent.kde.org/plasma/krdp
+52f4255c350d7903d1e5eeeb885a79cfe3042c8f	not-for-merge	'refs/backups/work-branch-work/persist-1712579580' of https://invent.kde.org/plasma/krdp
+be1d344aaf6dc02cf5cfc111207f824de97796f3	not-for-merge	'refs/backups/work-branch-work/redstrate/fix-ci-1705758705' of https://invent.kde.org/plasma/krdp
+55100d31985a3cacb493b9ae7e4e83f33d32b891	not-for-merge	'refs/backups/work-branch-work/redstrate/fix-wrong-ip-address-1752605453' of https://invent.kde.org/plasma/krdp
+e9bd153494ff50dc93d5a09e6d445cde118cc8ff	not-for-merge	'refs/backups/work-branch-work/redstrate/fix-wrong-ip-address-1752703951' of https://invent.kde.org/plasma/krdp
+459c98b40e077199ccf7549393097a3c4dcbf3eb	not-for-merge	'refs/backups/work-branch-work/redstrate/fix-wrong-ip-address-1752716210' of https://invent.kde.org/plasma/krdp
+95c1d59940bbfa645540a849f21ff207e5ecb007	not-for-merge	'refs/backups/work-branch-work/redstrate/system-tray-icon-1759177434' of https://invent.kde.org/plasma/krdp
+fef97cb029f91018cfc0ba4204dabd13b1e9eabf	not-for-merge	'refs/backups/work-branch-work/redstrate/system-tray-icon-1759177507' of https://invent.kde.org/plasma/krdp
+68f17e81dd07d85a2a3103083e2ac81e6702c236	not-for-merge	'refs/backups/work-branch-work/remove_check_qt_6_10-1780924249' of https://invent.kde.org/plasma/krdp
+9de546e05f410d423e693aaace940fd5dd29211a	not-for-merge	'refs/backups/work-branch-work/remove_check_qt_6_10-1780924273' of https://invent.kde.org/plasma/krdp
+9f793a4c0785163b73ba701147f2922889dc7920	not-for-merge	'refs/backups/work-branch-work/sebas/mobilekcm-1738158838' of https://invent.kde.org/plasma/krdp
+bef527e040ea38bbd34de7ff6398187d8c746301	not-for-merge	'refs/backups/work-branch-work/sebas/mobilekcm-1738160467' of https://invent.kde.org/plasma/krdp
+c31a33b1307cd8f16dd2a93d5d6d5ef00909401e	not-for-merge	'refs/backups/work-branch-work/sebas/mobilekcm-1738160853' of https://invent.kde.org/plasma/krdp
+5d2b9657054387cb2fac697af39b932e86da6e97	not-for-merge	'refs/backups/work-branch-work/sebas/mobilekcm-1740566347' of https://invent.kde.org/plasma/krdp
+86d1ffab5383ae5a89efc1f62973b82b84d129f3	not-for-merge	'refs/backups/work-branch-work/sebas/mobilekcm-1740566487' of https://invent.kde.org/plasma/krdp
+37e38b482149a59700c3658820660bd814148fe1	not-for-merge	'refs/backups/work-branch-work/sitter/clidocs-1758101682' of https://invent.kde.org/plasma/krdp
+861de98c106e3e3aa40be5417fada08a2adb01fe	not-for-merge	'refs/backups/work-branch-work/sitter/clidocs-1758101802' of https://invent.kde.org/plasma/krdp
+86f4b2885b91500270f4eb4684064372db721f31	not-for-merge	'refs/backups/work-branch-work/sitter/clidocs-1758102882' of https://invent.kde.org/plasma/krdp
+ea51e787c7ed82d60b3e331ba1c61211ea64e3be	not-for-merge	'refs/backups/work-branch-work/sitter/megaauth-1747063635' of https://invent.kde.org/plasma/krdp
+5231241834121e54faee68e43dda8e7a612a50c9	not-for-merge	'refs/backups/work-branch-work/sitter/megaauth-1747092218' of https://invent.kde.org/plasma/krdp
+45648fa0f49edf0a2c6d30119076a5ec50e6b8c7	not-for-merge	'refs/backups/work-branch-work/sitter/megaauth-1747092363' of https://invent.kde.org/plasma/krdp
+fe3deba68260280105e054a6d799fdd0a527c971	not-for-merge	'refs/backups/work-branch-work/sitter/nocrashy-1751642935' of https://invent.kde.org/plasma/krdp
+6a41f9a1af66138d307bd42c226b6cbb8d535afe	not-for-merge	'refs/backups/work-branch-work/sitter/nocrashy-1751643065' of https://invent.kde.org/plasma/krdp
+a75e33a4562bcec9c8886094378b324cfb1e2d61	not-for-merge	'refs/backups/work-branch-work/sitter/unit-1736443153' of https://invent.kde.org/plasma/krdp
+f1647b657f3af89f51cb7641760cf29311e0506b	not-for-merge	'refs/backups/work-branch-work/sitter/unit-1736505181' of https://invent.kde.org/plasma/krdp
+6f62d44a597ddb578879175dfa4d5152646380a6	not-for-merge	'refs/backups/work-branch-work/vkrause/update-flatpak-runtime-1746779617' of https://invent.kde.org/plasma/krdp
+1d3dec47e63b2c60946eef5de30367ec8095a85e	not-for-merge	'refs/backups/work-branch-work/zamundaaa/fix-build-1777576301' of https://invent.kde.org/plasma/krdp
+433472bb34ac0d055b02a961a1336c08e50e8e14	not-for-merge	branch 'Plasma/6.1' of https://invent.kde.org/plasma/krdp
+414f68e85adac591a34aab9711f50f0b7226cd52	not-for-merge	branch 'Plasma/6.2' of https://invent.kde.org/plasma/krdp
+284f9df05fe00dbfcf5628efc51b37f2a792e635	not-for-merge	branch 'Plasma/6.3' of https://invent.kde.org/plasma/krdp
+5c7f595104d7d01ecc008a739be2714e4825fad8	not-for-merge	branch 'Plasma/6.4' of https://invent.kde.org/plasma/krdp
+82fd11a7b83d6861a9259e629ed983b9265df801	not-for-merge	branch 'Plasma/6.5' of https://invent.kde.org/plasma/krdp
+6c35f837f97ccc6c57495d729459fc6ecc8c5116	not-for-merge	branch 'Plasma/6.6' of https://invent.kde.org/plasma/krdp
+573e40a91fec497f6f4ca17c306f3cc8d70aed05	not-for-merge	branch 'Plasma/6.7' of https://invent.kde.org/plasma/krdp
+6d453c86d25c4a0b4acce70fb12499211201fe48	not-for-merge	branch 'Plasma/6.8' of https://invent.kde.org/plasma/krdp
+cfeffd3a2085a3d7e221e858f7c3a6ff4f733880	not-for-merge	branch 'flatpak' of https://invent.kde.org/plasma/krdp
+9986a6a9e95cee5f4c3192afadf694b15d4d14a4	not-for-merge	branch 'master' of https://invent.kde.org/plasma/krdp
+e8d34eea3e481eebf1f9a59b9cdda68fc1fab87c	not-for-merge	branch 'work/add_xml_yaml' of https://invent.kde.org/plasma/krdp
+72e507766bb9f7ce3d97a28db5f1486db84da1d4	not-for-merge	branch 'work/ahiemstra/quality' of https://invent.kde.org/plasma/krdp
+850867392f6f99ee40158eb0b877cd14b3eb8ce0	not-for-merge	branch 'work/ahiemstra/readme' of https://invent.kde.org/plasma/krdp
+88a2b1509b172a0c8d0a4600cffc3988c82059bc	not-for-merge	branch 'work/akselmo/cmakeaaaaaaaaaa' of https://invent.kde.org/plasma/krdp
+939de8404e92ce144cc40b489335dd996a207946	not-for-merge	branch 'work/akselmo/kcm-service' of https://invent.kde.org/plasma/krdp
+4c423280679d90b3ce4796d56450ef486c883998	not-for-merge	branch 'work/akselmo/our-own-peer-close' of https://invent.kde.org/plasma/krdp
+3ad63f9cc66941797a9ce5ef1693cc4a28e56b1e	not-for-merge	branch 'work/akselmo/rewrite-management-warning' of https://invent.kde.org/plasma/krdp
+0edb96b783fac85affaefc3dac11e541fd82bd87	not-for-merge	branch 'work/apol/virtual-monitor' of https://invent.kde.org/plasma/krdp
+14333bd215d096532a6442c6b4553c36ab5ce82e	not-for-merge	branch 'work/d_ed/buttons' of https://invent.kde.org/plasma/krdp
+2f0dc9316565defe91a9df776d7b134bb3500ab8	not-for-merge	branch 'work/d_ed/cleanup' of https://invent.kde.org/plasma/krdp
+efb21a1c8983b3b01051716e19a934519c5f07a9	not-for-merge	branch 'work/d_ed/damage' of https://invent.kde.org/plasma/krdp
+dc555dfb33b8b878ab12e3e53ca33117d4d06d4d	not-for-merge	branch 'work/d_ed/enum_expose' of https://invent.kde.org/plasma/krdp
+0eca13dfe85af123c15ee4e39424c5080e3e7bf1	not-for-merge	branch 'work/d_ed/flatpak_manifest' of https://invent.kde.org/plasma/krdp
+b1b5c1cc5930e6961a83f07d67bc743a7396b8be	not-for-merge	branch 'work/d_ed/libei_2' of https://invent.kde.org/plasma/krdp
+3fb5caf870e6f173d93b47c94d176c3fd5261b55	not-for-merge	branch 'work/d_ed/multi-screen' of https://invent.kde.org/plasma/krdp
+460709585be25ef81e2d1da9a16636d9e589d00e	not-for-merge	branch 'work/d_ed/multilogin' of https://invent.kde.org/plasma/krdp
+096b31e2219adf587b94eedb08c85644d60f1474	not-for-merge	branch 'work/d_ed/multimon' of https://invent.kde.org/plasma/krdp
+086ea34f6496f600a1952a919b847bf063ba293c	not-for-merge	branch 'work/d_ed/multimon2' of https://invent.kde.org/plasma/krdp
+be6d66b92ca735001d4d8d27ccffd0f1ce281bef	not-for-merge	branch 'work/d_ed/pam_login_config' of https://invent.kde.org/plasma/krdp
+500e324056073147a3d85736dd932d866f7db72e	not-for-merge	branch 'work/d_ed/plasma-ei' of https://invent.kde.org/plasma/krdp
+acb7cfa36d12bc7e1595080e8ea24822d02e27f0	not-for-merge	branch 'work/d_ed/port_to_libei' of https://invent.kde.org/plasma/krdp
+36edda8f462d2df968915a015abd0195a6620b43	not-for-merge	branch 'work/d_ed/restore' of https://invent.kde.org/plasma/krdp
+8ca68ee93b733eec554d0adf8fe79eb493089fa9	not-for-merge	branch 'work/d_ed/session_greeter_switch' of https://invent.kde.org/plasma/krdp
+15726fd0994c56440bc057b450d8e1554b218aac	not-for-merge	branch 'work/d_ed/thread_fix' of https://invent.kde.org/plasma/krdp
+4e527cb459543f294fc01d31291e843b80257734	not-for-merge	branch 'work/d_ed/timing' of https://invent.kde.org/plasma/krdp
+96897a8904ffeff4467c66864006429fb54f75e9	not-for-merge	branch 'work/d_ed/videostreamchange' of https://invent.kde.org/plasma/krdp
+92195307b7d873059181184238cdb7dde4c4123b	not-for-merge	branch 'work/d_ed/videostreamsurface3' of https://invent.kde.org/plasma/krdp
+5b8eaa1cf737cd82a4e4c2b13e70853bacc3f1fd	not-for-merge	branch 'work/d_ed_akseli/downscaling' of https://invent.kde.org/plasma/krdp
+eb49cc2065f841701b8f3cabc3dd095d90deb5c9	not-for-merge	branch 'work/graesslin/no-new-privs' of https://invent.kde.org/plasma/krdp
+b8454839f8d4fd7ba0c48dd247ddafa4a853bc82	not-for-merge	branch 'work/kbroulik/cursor-pos-upd' of https://invent.kde.org/plasma/krdp
+2e47a420bb6b9877648c69ce9c1ee2edaab0d7dc	not-for-merge	branch 'work/nico/lsan' of https://invent.kde.org/plasma/krdp
+4640b857747186e65c9a8b764b6aba19182afc0e	not-for-merge	branch 'work/olib-tp/krdp-daemon' of https://invent.kde.org/plasma/krdp
+2972e5b16cc7892deca47e0ad03a3c69406d7b4a	not-for-merge	branch 'work/olib-tp/krdp-server-cert' of https://invent.kde.org/plasma/krdp
+46f6e0b9a7102622912fc47e86438cfd9a876189	not-for-merge	branch 'work/redstrate/system-tray-icon' of https://invent.kde.org/plasma/krdp
+7116773b9fc6833b126eb2756dcad8fadea4719d	not-for-merge	branch 'work/revert-332834b1' of https://invent.kde.org/plasma/krdp
+46f6e0b9a7102622912fc47e86438cfd9a876189	not-for-merge	'refs/merge-requests/125/head' of https://invent.kde.org/plasma/krdp
+6d3d90c0ef3f82d12baafdc1e7e95e6e7a5592c1	not-for-merge	'refs/merge-requests/125/merge' of https://invent.kde.org/plasma/krdp
+b0b9ac0b0d01eb1a3b630412a3a6c10fb25c4cc7	not-for-merge	'refs/merge-requests/147/head' of https://invent.kde.org/plasma/krdp
+8d71eebba03a978a332eb903077041e283cf6f18	not-for-merge	'refs/merge-requests/147/merge' of https://invent.kde.org/plasma/krdp
+b8454839f8d4fd7ba0c48dd247ddafa4a853bc82	not-for-merge	'refs/merge-requests/184/head' of https://invent.kde.org/plasma/krdp
+977caf2787633728a3f544f8b36b23077e92d9ed	not-for-merge	'refs/merge-requests/184/merge' of https://invent.kde.org/plasma/krdp
+27d550ee675782e2dea8ff5b5302bd8ea1ff9b9e	not-for-merge	'refs/merge-requests/214/head' of https://invent.kde.org/plasma/krdp
+af241ca383845a9ad9be25b855633c1e2e251805	not-for-merge	'refs/merge-requests/214/merge' of https://invent.kde.org/plasma/krdp
+4e527cb459543f294fc01d31291e843b80257734	not-for-merge	'refs/merge-requests/236/head' of https://invent.kde.org/plasma/krdp
+29ed33d5fb54a0cc185fa121c04edf559dcbec29	not-for-merge	'refs/merge-requests/236/merge' of https://invent.kde.org/plasma/krdp
+a9f80c46fb2ad4ee39dc3c25f844415da61d6b44	not-for-merge	'refs/merge-requests/239/head' of https://invent.kde.org/plasma/krdp
+169cbe2c2c69ab41faeb29532daee49eb30ea0fc	not-for-merge	'refs/merge-requests/239/merge' of https://invent.kde.org/plasma/krdp
+92195307b7d873059181184238cdb7dde4c4123b	not-for-merge	'refs/merge-requests/245/head' of https://invent.kde.org/plasma/krdp
+762018fe575de6143f298c7ea2b126f5b64e25fd	not-for-merge	'refs/merge-requests/245/merge' of https://invent.kde.org/plasma/krdp
+117b6b7703725e581c043af71c5b2df2129bc5ab	not-for-merge	'refs/merge-requests/250/head' of https://invent.kde.org/plasma/krdp
+aed2b3dc835ce9a2a6de96c32d53a92a7e6833de	not-for-merge	'refs/merge-requests/250/merge' of https://invent.kde.org/plasma/krdp
+095f6ea5e07f6e803b23bb087a92b8da52b33ca0	not-for-merge	'refs/merge-requests/251/head' of https://invent.kde.org/plasma/krdp
+a56e958b929bd7977b634335fda1bfc01b4a3145	not-for-merge	'refs/merge-requests/251/merge' of https://invent.kde.org/plasma/krdp
+d863753a4eaddaa92d2ba21cf71eb4cb838a1d71	not-for-merge	'refs/merge-requests/252/head' of https://invent.kde.org/plasma/krdp
+b3d0dbe7bd7398585a0deb16fe95c0904d1a9142	not-for-merge	'refs/merge-requests/252/merge' of https://invent.kde.org/plasma/krdp
+573e40a91fec497f6f4ca17c306f3cc8d70aed05	not-for-merge	'refs/merge-requests/253/head' of https://invent.kde.org/plasma/krdp
+39145768601a109406dc00603d2fe573ae41b168	not-for-merge	'refs/merge-requests/253/merge' of https://invent.kde.org/plasma/krdp
+fe0037384404b74895bff5a5f4cf411a62f1c712	not-for-merge	'refs/merge-requests/254/head' of https://invent.kde.org/plasma/krdp
+e8c2431bb310380d3097fcfff0c67a4f61d149c9	not-for-merge	'refs/merge-requests/254/merge' of https://invent.kde.org/plasma/krdp
+d65f5f36f57d384ddd171883dc195d3cbe3887fa	not-for-merge	'refs/merge-requests/255/head' of https://invent.kde.org/plasma/krdp
+4f7cb5e88fe0001aa908aa2c475a755dec146698	not-for-merge	'refs/merge-requests/255/merge' of https://invent.kde.org/plasma/krdp
+472584e57758863fa7aea831450e52d09c3900de	not-for-merge	'refs/merge-requests/256/head' of https://invent.kde.org/plasma/krdp
+c4988d40f3f175b3cbfa57d1b6a1f2f9438d2748	not-for-merge	'refs/merge-requests/256/merge' of https://invent.kde.org/plasma/krdp
+d6b12bf58af0c49fa5fb4a9caa40577753ed1d23	not-for-merge	'refs/merge-requests/257/head' of https://invent.kde.org/plasma/krdp
+a9e0891fb30a462617b0670e60921e01adeaff1d	not-for-merge	'refs/merge-requests/257/merge' of https://invent.kde.org/plasma/krdp
+acb7cfa36d12bc7e1595080e8ea24822d02e27f0	not-for-merge	'refs/merge-requests/258/head' of https://invent.kde.org/plasma/krdp
+2ebdac2af99c2cdd24040062bb74c82658565045	not-for-merge	'refs/merge-requests/258/merge' of https://invent.kde.org/plasma/krdp
+500e324056073147a3d85736dd932d866f7db72e	not-for-merge	'refs/merge-requests/259/head' of https://invent.kde.org/plasma/krdp
+c32d67c82d19860f6dba70b805e6502f269ae1a8	not-for-merge	'refs/merge-requests/259/merge' of https://invent.kde.org/plasma/krdp
+b1b5c1cc5930e6961a83f07d67bc743a7396b8be	not-for-merge	'refs/merge-requests/260/head' of https://invent.kde.org/plasma/krdp
+1735d285be679c4cdfc6c4f8fcdf2ff21b9ea1bd	not-for-merge	'refs/merge-requests/260/merge' of https://invent.kde.org/plasma/krdp
+1da02898d56875bca490140694c56732beb1bf1f	not-for-merge	'refs/merge-requests/261/head' of https://invent.kde.org/plasma/krdp
+be9cfc9b3dff085f99b7b06a877a9c3bf3e1b4cd	not-for-merge	'refs/merge-requests/261/merge' of https://invent.kde.org/plasma/krdp
+97634059d4084a4d6ced167feacf411fbca410ad	not-for-merge	'refs/merge-requests/262/head' of https://invent.kde.org/plasma/krdp
+97e6a3067eba0ee1d99ddfbef22f38a6b7cafea8	not-for-merge	'refs/merge-requests/262/merge' of https://invent.kde.org/plasma/krdp
+2972e5b16cc7892deca47e0ad03a3c69406d7b4a	not-for-merge	'refs/merge-requests/263/head' of https://invent.kde.org/plasma/krdp
+e1b848de8218c7a59dea6ab195e99c59ee40fb42	not-for-merge	'refs/merge-requests/263/merge' of https://invent.kde.org/plasma/krdp
+6d453c86d25c4a0b4acce70fb12499211201fe48	not-for-merge	'refs/merge-requests/264/head' of https://invent.kde.org/plasma/krdp
+c7f5be0e93a131ecbdd787a6b8a959106f4fef17	not-for-merge	'refs/merge-requests/264/merge' of https://invent.kde.org/plasma/krdp
+157ca09d303a43b2e7f37d43ae49830646dba03b	not-for-merge	tag 'alpha-20230808' of https://invent.kde.org/plasma/krdp
+32c43fdf6925ea22f3c7553533d2691e465dcd83	not-for-merge	tag 'v6.0.90' of https://invent.kde.org/plasma/krdp
+0eb82a165bb978f59b73fae9fe939f80381bbbd1	not-for-merge	tag 'v6.1.0' of https://invent.kde.org/plasma/krdp
+06a187e75fc48f8ef189fbd4ca8182f72619671f	not-for-merge	tag 'v6.1.1' of https://invent.kde.org/plasma/krdp
+6eddba45d5436a52bb631b9b8c25b9af0d322db4	not-for-merge	tag 'v6.1.2' of https://invent.kde.org/plasma/krdp
+fe8140590c5b29b5cb03a77627ce860846921812	not-for-merge	tag 'v6.1.3' of https://invent.kde.org/plasma/krdp
+baa5e44296eec9af56e36b6a8fe7a112caed7632	not-for-merge	tag 'v6.1.4' of https://invent.kde.org/plasma/krdp
+e8615e5fa56f404bae267a15f2e16219eb874dc5	not-for-merge	tag 'v6.1.5' of https://invent.kde.org/plasma/krdp
+5e12516bcb1d36e112fbfbf07bd1b74e1d6a980b	not-for-merge	tag 'v6.1.90' of https://invent.kde.org/plasma/krdp
+f6bbd7603cebb856d598e3ad3a51d949d329722e	not-for-merge	tag 'v6.2.0' of https://invent.kde.org/plasma/krdp
+b0fb552fffaf120906606f9012c148c1f9c9c967	not-for-merge	tag 'v6.2.1' of https://invent.kde.org/plasma/krdp
+865239b1624122da68acd97171c3952084844fe9	not-for-merge	tag 'v6.2.2' of https://invent.kde.org/plasma/krdp
+d13f3edc721b6cdf9f65adc98496eb8c2101b3d7	not-for-merge	tag 'v6.2.3' of https://invent.kde.org/plasma/krdp
+2a642b59f522f5f70c33a580e223078ec6087c53	not-for-merge	tag 'v6.2.4' of https://invent.kde.org/plasma/krdp
+47dabac6c727d53b1f79de2aab007f8228d0b142	not-for-merge	tag 'v6.2.5' of https://invent.kde.org/plasma/krdp
+cc756b4270877997f0499a4b7a67ef8499728b79	not-for-merge	tag 'v6.2.90' of https://invent.kde.org/plasma/krdp
+493ea80f2eb4f1a58513c2ff330fe26075dc174a	not-for-merge	tag 'v6.2.91' of https://invent.kde.org/plasma/krdp
+7ecd2d15e99deec5721f439091cf4fd7c5d65c2d	not-for-merge	tag 'v6.3.0' of https://invent.kde.org/plasma/krdp
+8672d01a3e9f26f8ae89e4d480fd5d0b35fae276	not-for-merge	tag 'v6.3.1' of https://invent.kde.org/plasma/krdp
+df2a482032da90d71213081f8bd0a6fd41764910	not-for-merge	tag 'v6.3.2' of https://invent.kde.org/plasma/krdp
+48ffb648e083806a4ed84a9a2aeb5744f19bec0a	not-for-merge	tag 'v6.3.3' of https://invent.kde.org/plasma/krdp
+7a49f928a43f5b9584cd8fd642008e19159b98df	not-for-merge	tag 'v6.3.4' of https://invent.kde.org/plasma/krdp
+623838141ebc47caf9306e6c1faf8eb9ca5a4671	not-for-merge	tag 'v6.3.5' of https://invent.kde.org/plasma/krdp
+1fee6fd5cbed85272361f2d8fdf19350e3da1260	not-for-merge	tag 'v6.3.6' of https://invent.kde.org/plasma/krdp
+1cdf20c3d64bc0a42e046c4305df7e2cdc0b1445	not-for-merge	tag 'v6.3.90' of https://invent.kde.org/plasma/krdp
+1a51f2c037799789aed2d94234af9d3acc6a6677	not-for-merge	tag 'v6.3.91' of https://invent.kde.org/plasma/krdp
+6a24ef5712b5252c821f13292666b13a2903fa80	not-for-merge	tag 'v6.4.0' of https://invent.kde.org/plasma/krdp
+d565b647dfc949b1a12ee6e026b5e89fec347c4a	not-for-merge	tag 'v6.4.1' of https://invent.kde.org/plasma/krdp
+81ef76424f9fbb3020a6d235da7b5b3b41adae54	not-for-merge	tag 'v6.4.2' of https://invent.kde.org/plasma/krdp
+5ea7d81d14a1d10a4b4a86bf91a9de6fe320f732	not-for-merge	tag 'v6.4.3' of https://invent.kde.org/plasma/krdp
+b22680f8237d8fe2c4413b7564d7aeb7415ee6bc	not-for-merge	tag 'v6.4.4' of https://invent.kde.org/plasma/krdp
+5f72243bd67187258aea4562fcd1f64259a2da5b	not-for-merge	tag 'v6.4.5' of https://invent.kde.org/plasma/krdp
+a43f816a35d17d48b50872cde56d458842f215e4	not-for-merge	tag 'v6.4.6' of https://invent.kde.org/plasma/krdp
+54ab6ebd785c595d7fd3f8491757fdccdaeb3410	not-for-merge	tag 'v6.4.90' of https://invent.kde.org/plasma/krdp
+8f7ad95f1eeea31b98ad8362aca653f3a792e0e0	not-for-merge	tag 'v6.4.91' of https://invent.kde.org/plasma/krdp
+30261214fd9f2edf2a3479b10461f2470bb44de8	not-for-merge	tag 'v6.5.0' of https://invent.kde.org/plasma/krdp
+4866f1dbff0b422891ef758273adf6d68ad51b9e	not-for-merge	tag 'v6.5.1' of https://invent.kde.org/plasma/krdp
+49749ea945fb2513b012c5e4ba78c98eddf64bf7	not-for-merge	tag 'v6.5.2' of https://invent.kde.org/plasma/krdp
+cb0c3a168fb134ce652003d34fb1558d89207620	not-for-merge	tag 'v6.5.3' of https://invent.kde.org/plasma/krdp
+6d7bd292e95144c85388491861f8056b53435f05	not-for-merge	tag 'v6.5.4' of https://invent.kde.org/plasma/krdp
+16497d0531b08db2d15a24b6a3ac6bf1dca6cc38	not-for-merge	tag 'v6.5.5' of https://invent.kde.org/plasma/krdp
+a59327457de9c8464ff2e36860146f3338d0dc27	not-for-merge	tag 'v6.5.6' of https://invent.kde.org/plasma/krdp
+28c8d8e363a9eddfbfed23d371c577af83a4ec80	not-for-merge	tag 'v6.5.90' of https://invent.kde.org/plasma/krdp
+aae683ca654990e0aa196cb32926206bac87512c	not-for-merge	tag 'v6.5.91' of https://invent.kde.org/plasma/krdp
+da6abba323e8f1eb4be03f70d3abc9b482a6f805	not-for-merge	tag 'v6.6.0' of https://invent.kde.org/plasma/krdp
+edb42efd6bb60be6670f597ef50b931ae5cdb8da	not-for-merge	tag 'v6.6.1' of https://invent.kde.org/plasma/krdp
+5d915a36fc063c8c0c2f6475e453f8d8de8d9164	not-for-merge	tag 'v6.6.2' of https://invent.kde.org/plasma/krdp
+a8b6ccb6af5791aea973546e3d7742e318d88fa2	not-for-merge	tag 'v6.6.3' of https://invent.kde.org/plasma/krdp
+28a5279f040ff1e597731a4c1c2a36381d5908ee	not-for-merge	tag 'v6.6.4' of https://invent.kde.org/plasma/krdp
+cd6048e1a142e0af18a3c75f2106c1b4b38ba2b7	not-for-merge	tag 'v6.6.5' of https://invent.kde.org/plasma/krdp
+53a81185a156afc2aee16261c0873bf8b57a6cab	not-for-merge	tag 'v6.6.6' of https://invent.kde.org/plasma/krdp
+8773bc88416e227539559fe1405f3e4510ce64b5	not-for-merge	tag 'v6.6.7' of https://invent.kde.org/plasma/krdp
+8d4088537a0cf11026a805514ef89e4e9b31fe1f	not-for-merge	tag 'v6.6.90' of https://invent.kde.org/plasma/krdp
+b088f2ed48588d8af5c37c55f9617f5d4cc3bba8	not-for-merge	tag 'v6.6.91' of https://invent.kde.org/plasma/krdp
+b1a49644aed95132ac0d2eee19780040c061fdaa	not-for-merge	tag 'v6.7.0' of https://invent.kde.org/plasma/krdp
+2d6d22ee07e8a8cfc76b7acc6182f1184865375f	not-for-merge	tag 'v6.7.1' of https://invent.kde.org/plasma/krdp
+5035496c53be4a482661b62bc122fb443d2cecd4	not-for-merge	tag 'v6.7.2' of https://invent.kde.org/plasma/krdp
+95d7dbd4d50f6da7fde7f2f19bbef9bdda18c2b1	not-for-merge	tag 'v6.7.3' of https://invent.kde.org/plasma/krdp
+9c8a1043c09292980344b39c643aeb65a1df5ea0	not-for-merge	tag 'v6.7.4' of https://invent.kde.org/plasma/krdp
+64dd24c6e9c978b13ec7aca7af83142f0c41d774	not-for-merge	tag 'v6.7.5' of https://invent.kde.org/plasma/krdp
+1d96c86897fba15eac1cbf681a4a6a78e31c4a7a	not-for-merge	tag 'v6.7.90' of https://invent.kde.org/plasma/krdp
+eafb7cd300d6951695d1ee9288d1864356fcc551	not-for-merge	tag 'v6.7.91' of https://invent.kde.org/plasma/krdp
+8e736b89bd692794e7d1032980faf6e6de7c5bd0	not-for-merge	tag 'v6.8.0' of https://invent.kde.org/plasma/krdp

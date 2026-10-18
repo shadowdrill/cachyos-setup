@@ -4,28 +4,59 @@ CachyOS-side scripts for joining the [Linus Tech Tips folding@home team](https:/
 
 ## One-time per machine
 
+The passkey is a per-user secret that's the same across every machine in the
+fleet. There are two ways to get it onto a new box; pick one:
+
+**A. Decrypt the committed `passkey.gpg` (preferred for fleet rollouts):**
+```bash
+cd scripts/folding
+./install.sh --seed-passkey --run-configure
+# ...prompts for the passphrase (or --passphrase-file <path> for scripted)
+```
+
+**B. Type/paste the passkey on the new machine:**
+```bash
+cd scripts/folding
+./install.sh [--passkey <32hex> | --passkey-file <path>] [--run-configure]
+# or, after the package is installed:
+./configure.sh     # will prompt you to paste the passkey if missing
+```
+
+The full flow (used by either path):
+
 ```bash
 cd scripts/folding
 
 # 1. Install the FAHClient package from the AUR (needs sudo; builds from source, ~3-10 min).
-#    Pass --passkey to seed the per-user key at the same time, or --run-configure
-#    to chain the configure step too.
-./install.sh [--passkey <32hex> | --passkey-file <path>] [--run-configure]
+./install.sh --seed-passkey --run-configure
 
-# 2. If you didn't pass --passkey in step 1: get one at
-#    https://apps.foldingathome.org/passkey (one per user, valid on every machine)
-#    and drop it in ~/.config/foldingathome/passkey (the dir is mode 700, the file
-#    must be mode 600).
-mkdir -p ~/.config/foldingathome && chmod 700 ~/.config/foldingathome
-umask 077
-${EDITOR:-nano} ~/.config/foldingathome/passkey     # paste the 32-hex passkey, save
-
-# 3. Write /etc/fah-client/config.xml (team=223518, user=<hostname>-folding, auto-detect GPU)
-./configure.sh
-
-# 4. Verify
+# 2. Verify
 ./status.sh
 ```
+
+If `configure.sh` runs and finds no passkey in `~/.config/foldingathome/passkey`
+AND a `passkey.gpg` next to itself, it will try to decrypt that automatically
+before erroring out.
+
+## Setting up `passkey.gpg` (one-time, on any box that has the plaintext key)
+
+```bash
+cd scripts/folding
+gpg --batch --yes --pinentry-mode loopback \
+    --passphrase '<your passphrase>' \
+    --symmetric --cipher-algo AES256 \
+    -o passkey.gpg ~/.config/foldingathome/passkey
+git add passkey.gpg
+git commit -m "folding: rotate GPG-encrypted passkey"
+```
+
+The file is **not** in `.gitignore` — it should be committed, that's the
+point. The passphrase is the only thing protecting the secret.
+
+To rotate the passphrase later, just re-encrypt and commit again. To rotate
+the passkey itself, get a new one from
+<https://apps.foldingathome.org/passkey>, drop it into
+`~/.config/foldingathome/passkey`, re-encrypt, commit.
 
 ## Day-to-day
 

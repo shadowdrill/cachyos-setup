@@ -4,14 +4,27 @@
 # Also creates the per-user config dir at ~/.config/foldingathome/ (mode 700)
 # and optionally writes the 32-hex passkey there (mode 600).
 # Team config (id, username, slots) is written by configure.sh.
-# Requires: base-devel, git, an active internet connection, sudo access.
+# Requires: base-devel, git, gnupg, an active internet connection, sudo access.
 #
 # Usage:
-#   ./install.sh                          # build, install, no passkey yet
-#   ./install.sh --passkey <32hex>        # also seed the passkey file
-#   ./install.sh --passkey-file <path>    # read passkey from an existing file
-#   ./install.sh --no-start               # install but leave service stopped
-#   ./install.sh --run-configure          # also run configure.sh at the end
+#   ./install.sh                                # build, install, no passkey yet
+#   ./install.sh --passkey <32hex>              # also seed the passkey file
+#   ./install.sh --passkey-file <path>          # read passkey from an existing file
+#   ./install.sh --seed-passkey                 # decrypt scripts/folding/passkey.gpg
+#                                             # (committed) and write the key
+#   ./install.sh --seed-passkey --from <path>   # use a different .gpg file
+#   ./install.sh --seed-passkey --passphrase-file <path>
+#                                             # non-interactive (e.g. on a
+#                                             # scripted fleet rollout)
+#   ./install.sh --no-start                     # install but leave service stopped
+#   ./install.sh --run-configure                # also run configure.sh at the end
+#
+# One-time setup of the encrypted passkey (on any box that already has the
+# plaintext key at ~/.config/foldingathome/passkey):
+#   gpg --batch --yes --pinentry-mode loopback --passphrase '<your passphrase>' \\
+#       --symmetric --cipher-algo AES256 \\
+#       -o scripts/folding/passkey.gpg ~/.config/foldingathome/passkey
+#   git add scripts/folding/passkey.gpg && git commit
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
@@ -29,18 +42,26 @@ trap cleanup EXIT
 start_service=1
 passkey_arg=""
 passkey_file_arg=""
+seed_passkey=0
+seed_from=""
+seed_passphrase_file=""
 run_configure=0
 # while loop (not for) so `shift` inside the body affects the next iteration
 while (( $# > 0 )); do
     case "${1}" in
-        --no-start)        start_service=0; shift ;;
-        --passkey)         passkey_arg="${2:-}"; shift 2 ;;
-        --passkey=*)       passkey_arg="${1#--passkey=}"; shift ;;
-        --passkey-file)    passkey_file_arg="${2:-}"; shift 2 ;;
-        --passkey-file=*)  passkey_file_arg="${1#--passkey-file=}"; shift ;;
-        --run-configure)   run_configure=1; shift ;;
+        --no-start)             start_service=0; shift ;;
+        --passkey)              passkey_arg="${2:-}"; shift 2 ;;
+        --passkey=*)            passkey_arg="${1#--passkey=}"; shift ;;
+        --passkey-file)         passkey_file_arg="${2:-}"; shift 2 ;;
+        --passkey-file=*)       passkey_file_arg="${1#--passkey-file=}"; shift ;;
+        --seed-passkey)         seed_passkey=1; shift ;;
+        --from)                 seed_from="${2:-}"; shift 2 ;;
+        --from=*)               seed_from="${1#--from=}"; shift ;;
+        --passphrase-file)      seed_passphrase_file="${2:-}"; shift 2 ;;
+        --passphrase-file=*)    seed_passphrase_file="${1#--passphrase-file=}"; shift ;;
+        --run-configure)        run_configure=1; shift ;;
         -h|--help)
-            sed -n '2,18p' "${BASH_SOURCE[0]}" | sed 's/^# *//'
+            sed -n '2,32p' "${BASH_SOURCE[0]}" | sed 's/^# *//'
             exit 0
             ;;
         *) echo "Unknown arg: ${1}" >&2; exit 2 ;;
@@ -113,6 +134,22 @@ if [[ -n "${passkey_arg}" ]]; then
     echo "Wrote passkey to ${PASSKEY_FILE} (mode 600, gitignored)"
 fi
 
+# --- or, decrypt the committed passkey.gpg into the passkey file ---
+if (( seed_passkey )); then
+    if [[ ! -x "${SCRIPT_DIR}/seed-passkey.sh" ]]; then
+        echo "seed-passkey.sh not found next to install.sh; cannot --seed-passkey." >&2
+        exit 1
+    fi
+    seed_args=()
+    [[ -n "${seed_from}" ]]             && seed_args+=(--from "${seed_from}")
+    [[ -n "${seed_passphrase_file}" ]]  && seed_args+=(--passphrase-file "${seed_passphrase_file}")
+    if ! "${SCRIPT_DIR}/seed-passkey.sh" "${seed_args[@]}"; then
+        echo "Failed to seed passkey from encrypted file." >&2
+        exit 1
+    fi
+    passkey_written=1
+fi
+
 if (( start_service )); then
     echo
     echo ">>> Enabling and starting fah-client.service"
@@ -131,7 +168,8 @@ if (( run_configure )) && [[ -x "${SCRIPT_DIR}/configure.sh" ]]; then
     else
         echo
         echo "--run-configure requested but no passkey is in ${PASSKEY_FILE} yet."
-        echo "Re-run with --passkey <32hex> --run-configure, or paste a key first."
+        echo "Re-run with --passkey <32hex> --run-configure, --passkey-file <path> --run-configure,"
+        echo "or --seed-passkey --run-configure."
         exit 1
     fi
 fi
@@ -151,6 +189,9 @@ else
     echo "  3. Run ./configure.sh to write /etc/fah-client/config.xml with your"
     echo "     team (223518, Linus Tech Tips) and machine name, then restart the"
     echo "     service with:  sudo systemctl restart fah-client.service"
+    echo
+    echo "  Alternative: commit scripts/folding/passkey.gpg (gpg --symmetric) and"
+    echo "  use --seed-passkey on new machines so the plaintext is never typed again."
 fi
 echo
 echo "Monitor at any time:"

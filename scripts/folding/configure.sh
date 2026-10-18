@@ -50,7 +50,19 @@ fi
 
 # --- passkey ---
 if [[ ! -s "${PASSKEY_FILE}" ]]; then
-    cat <<EOF >&2
+    ENCRYPTED="${SCRIPT_DIR}/passkey.gpg"
+    if [[ -s "${ENCRYPTED}" && -x "${SCRIPT_DIR}/seed-passkey.sh" ]]; then
+        cat <<EOF >&2
+No passkey found at ${PASSKEY_FILE}, but a GPG-encrypted copy is committed
+at ${ENCRYPTED}. Decrypting it into place...
+EOF
+        if ! "${SCRIPT_DIR}/seed-passkey.sh" --from "${ENCRYPTED}"; then
+            echo "Decryption failed (or cancelled). Paste a passkey manually:" >&2
+            ENCRYPTED=""
+        fi
+    fi
+    if [[ ! -s "${PASSKEY_FILE}" ]]; then
+        cat <<EOF >&2
 No passkey found at ${PASSKEY_FILE}.
 
 Get one (one per user, valid on every machine):
@@ -67,8 +79,12 @@ Then save it to a file the script can read:
   chmod 600 '${PASSKEY_FILE}'
 
 Re-run this script.
+
+Alternative: commit scripts/folding/passkey.gpg (gpg --symmetric) once and
+this script will decrypt it automatically on every future box.
 EOF
-    exit 1
+        exit 1
+    fi
 fi
 chmod 600 "${PASSKEY_FILE}"
 PASSKEY="$(tr -d '[:space:]' < "${PASSKEY_FILE}")"

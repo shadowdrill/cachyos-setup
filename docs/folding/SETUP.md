@@ -20,21 +20,43 @@ This file records what was installed, when, and on which machines. It is the "as
 
 ```bash
 cd scripts/folding
-./install.sh                                                # 3-10 min build, needs sudo
-# create dir (also done by install.sh) and drop the passkey in
-mkdir -p ~/.config/foldingathome && chmod 700 ~/.config/foldingathome
-umask 077 && ${EDITOR:-nano} ~/.config/foldingathome/passkey
-./configure.sh
+./install.sh --seed-passkey --run-configure   # 3-10 min build + decrypt + write config
 ./status.sh
 ```
 
-Or, if you have the passkey already in a file, the one-shot is:
+The first time, on whatever box already has the plaintext key, also run the
+GPG setup once so the rest of the fleet can use `--seed-passkey`:
 
 ```bash
-./install.sh --passkey-file ~/my-fah-passkey --run-configure
+gpg --batch --yes --pinentry-mode loopback \
+    --passphrase '<pick a strong passphrase>' \
+    --symmetric --cipher-algo AES256 \
+    -o passkey.gpg ~/.config/foldingathome/passkey
+git add passkey.gpg && git commit -m "folding: commit GPG-encrypted passkey"
 ```
 
-(`./install.sh` also accepts `--passkey <32hex>` to take the key directly on the command line; the file form is preferred because it doesn't end up in shell history.)
+Then on every other box:
+
+```bash
+./install.sh --seed-passkey --run-configure
+# (or --passphrase-file <path> for non-interactive rollouts)
+```
+
+See `HANDOFF.md §11` for the full threat model and rotation procedure.
+
+Fallbacks if `passkey.gpg` isn't (yet) in the repo:
+
+```bash
+# If you have the passkey in a file:
+./install.sh --passkey-file ~/my-fah-passkey --run-configure
+
+# Or, if you want to type/paste the passkey on this box:
+./install.sh --passkey <32hex> --run-configure
+
+# Or, after install, just run configure.sh and it will try to decrypt
+# passkey.gpg itself, or prompt for a paste if that fails:
+./configure.sh
+```
 
 ## Machines running this
 
@@ -47,5 +69,7 @@ Or, if you have the passkey already in a file, the one-shot is:
 
 | Date | Change | Why |
 |---|---|---|
+| 2026-10-18 | added `seed-passkey.sh`; `install.sh` and `configure.sh` now both support `--seed-passkey` / `--from <path>` / `--passphrase-file <path>`; `configure.sh` auto-decrypts `passkey.gpg` as a fallback; `README.md`, `HANDOFF.md` (new §11) and `SETUP.md` updated | keep the FAH passkey out of shell history / unencrypted files / accidental commits, while still letting the repo roll out to a whole fleet with one `./install.sh` command |
+| 2026-10-18 | cachyos-taichi now actively folding (PID 20589); `config.xml` populated with team 223518, user `cachyos-taichi-folding`, 1 CPU + 1 GPU slot | first production install of the module |
 | 2026-10-18 | `install.sh` now pre-creates `~/.config/foldingathome/` (mode 700) and accepts `--passkey <32hex>` / `--passkey-file <path>` / `--run-configure`; doc updates in `README.md` and `HANDOFF.md` | make install a one-shot when a passkey is already available, instead of a 3-step dance |
 | 2026-10-18 | initial commit: `install.sh`, `configure.sh`, `status.sh`, `passkey.example`, `README.md`, `HANDOFF.md`, `SETUP.md` | first folding@home setup; uses AUR `foldingathome` 1:8.5.6-1; team 223518 (LTT) |

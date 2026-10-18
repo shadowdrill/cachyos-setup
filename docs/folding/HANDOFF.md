@@ -9,7 +9,7 @@ The scripts in `scripts/folding/` turn a fresh CachyOS box into a folding@home c
 | Step | Script | What it does |
 |---|---|---|
 | 1 | `install.sh` | clones the `foldingathome` AUR package, builds it, installs it, enables and starts `fah-client.service` |
-| 2 | (manual) | user pastes their 32-hex FAH passkey into `~/.config/foldingathome/passkey` (chmod 600) |
+| 2 | (key) | the 32-hex FAH passkey is decrypted from a GPG-encrypted `passkey.gpg` (committed) into `~/.config/foldingathome/passkey` (chmod 600) |
 | 3 | `configure.sh` | reads the passkey + this machine's hostname, writes `/etc/fah-client/config.xml` with team=223518, user=`<hostname>-folding`, GPU auto-detection, and restarts the service |
 
 After that, `status.sh` gives a one-screen overview at any time, and the FAHClient web control panel is reachable on `http://localhost:7396/`.
@@ -18,20 +18,20 @@ After that, `status.sh` gives a one-screen overview at any time, and the FAHClie
 
 ```bash
 cd scripts/folding
-./install.sh --passkey "$(cat ~/.config/foldingathome/passkey 2>/dev/null || echo GET-ONE-FIRST)" --run-configure
+./install.sh --seed-passkey --run-configure
+# ...type the passphrase when prompted (or --passphrase-file <path> for scripted)
 ./status.sh
 ```
 
-If you don't have a passkey file yet, the short form is:
+If you don't have `passkey.gpg` yet (e.g. first box, ever), bootstrap with a plaintext paste instead:
 
 ```bash
 cd scripts/folding
-./install.sh                                                     # 3-10 min build
-mkdir -p ~/.config/foldingathome && chmod 700 ~/.config/foldingathome
-umask 077 && ${EDITOR:-nano} ~/.config/foldingathome/passkey      # paste passkey
-./configure.sh                                                    # write config, restart
-./status.sh                                                       # verify
+./install.sh --passkey <32hex> --run-configure
 ```
+
+Or, after install, just run `configure.sh` — it will try to decrypt `passkey.gpg`
+itself, and if that fails, prompt for the plaintext key.
 
 The passkey is **one per user, not one per machine**. Every box you fold from uses the same passkey; the per-machine `user` field in `config.xml` is what keeps each box's points separate in the team stats.
 
@@ -162,3 +162,98 @@ Tracked in `SETUP.md` §"Machines running this" — keep it up to date as boxes 
 - Get a passkey: <https://apps.foldingathome.org/passkey>
 - AUR `foldingathome` package: <https://aur.archlinux.org/packages/foldingathome>
 - fah-client source: <https://github.com/foldingathome/fah-client-bastet>
+
+## 11. Passkey distribution — the GPG-encrypted `passkey.gpg` workflow
+
+The FAH passkey is one per user but every machine in the fleet needs it.
+Committing it in plaintext would leak it to anyone with repo read access;
+copying it by hand to each box doesn't scale and means the secret appears in
+shell history, terminal scrollback, etc. The compromise: commit a GPG-symmetric
+encrypted copy of the passkey in the repo, decrypt on each box at install time.
+
+### 11.1 One-time setup (on any box that already has the plaintext key)
+
+```bash
+cd scripts/folding
+
+# Choose a passphrase. It only protects the file in git; if you lose it
+# you re-encrypt with a new one. Don't reuse your disk-encryption password.
+gpg --batch --yes --pinentry-mode loopback \
+    --passphrase '<pick a strong passphrase>' \
+    --symmetric --cipher-algo AES256 \
+    -o passkey.gpg ~/.config/foldingathome/passkey
+
+# Sanity: confirm no plaintext leak
+grep -F "$(cat ~/.config/foldingathome/passkey)" passkey.gpg \
+    && { echo "FAIL: plaintext leaked"; exit 1; } || echo "ok: no plaintext in .gpg"
+
+git add passkey.gpg
+git commit -m "folding: commit GPG-encrypted passkey"
+git push
+```
+
+Output is ~106 bytes of binary (AES256.CFB). `passkey.gpg` is **not** in
+`.gitignore`; it should be committed.
+
+### 11.2 On every new machine (and after a rotation)
+
+```bash
+cd scripts/folding
+./install.sh --seed-passkey --run-configure
+# ...type the passphrase when gpg prompts
+```
+
+For non-interactive (fleet rollout, ansible, etc.):
+
+```bash
+# write the passphrase to a root-only file, then:
+sudo ./install.sh --seed-passkey --passphrase-file /root/.fah-pp --run-configure
+# the file should be chmod 600 and lives outside the repo
+```
+
+`--seed-passkey` calls `seed-passkey.sh` next to it, which:
+- decrypts `passkey.gpg` (or `--from <other path>`) into
+  `~/.config/foldingathome/passkey` (mode 600; dir created at mode 700)
+- validates the result is exactly 32 hex characters
+- aborts (and writes nothing) if gpg fails or the output is wrong
+
+`--run-configure` chains `configure.sh`, which will additionally try to
+decrypt `passkey.gpg` itself if it finds the destination empty — that
+fallback exists so the workflow keeps working if someone runs `configure.sh`
+without going through `install.sh`.
+
+### 11.3 Rotating the passphrase
+
+Re-encrypt the same plaintext with a new passphrase:
+
+```bash
+gpg --batch --yes --pinentry-mode loopback \
+    --passphrase '<new passphrase>' \
+    --symmetric --cipher-algo AES256 \
+    -o passkey.gpg ~/.config/foldingathome/passkey
+git add passkey.gpg && git commit --amend --no-edit && git push --force
+```
+
+(The `--amend` is fine because `passkey.gpg` is the only thing in this
+module that's ever updated; if you've made other changes since the initial
+commit, just make a new commit.)
+
+### 11.4 Rotating the actual FAH passkey
+
+Get a new one from <https://apps.foldingathome.org/passkey> (re-use the same
+email you used the first time), drop the new 32-hex key into
+`~/.config/foldingathome/passkey`, then re-run the §11.1 command with the
+new key in place. Old box WUs already credited to the previous key are
+unaffected.
+
+### 11.5 Threat model and limits
+
+- The GPG passphrase protects against: someone cloning the repo, a public
+  GitHub fork, an accidental `git add` in another branch, log/screen-share
+  leaks of the on-disk passkey file.
+- It does **not** protect against: someone with repo-write access who can
+  replace `passkey.gpg` (use signed commits / branch protection for that);
+  someone with sudo/root on the box at install time (they can read the
+  decrypted file from `~/.config/foldingathome/passkey` anyway).
+- The `~/.config/foldingathome/passkey` file ends up mode 600 owned by the
+  installing user, which is what fah-client's loader expects.

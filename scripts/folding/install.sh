@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
-# Install folding@home from the AUR on a CachyOS / Arch box.
-# Builds the package, installs it, enables and starts the service.
+# Install folding@home on a CachyOS / Arch or Ubuntu 24 box.
+# Detects the distro and dispatches to the right per-distro installer
+# (install-arch.sh for Arch-family, install-ubuntu.sh for Debian-family).
 # Also creates the per-user config dir at ~/.config/foldingathome/ (mode 700)
 # and optionally writes the 32-hex passkey there (mode 600).
 # Team config (id, username, slots) is written by configure.sh.
-# Requires: base-devel, git, gnupg, an active internet connection, sudo access.
 #
 # Usage:
-#   ./install.sh                                # build, install, no passkey yet
+#   ./install.sh                                # build/install, no passkey yet
 #   ./install.sh --passkey <32hex>              # also seed the passkey file
 #   ./install.sh --passkey-file <path>          # read passkey from an existing file
 #   ./install.sh --seed-passkey                 # decrypt scripts/folding/passkey.gpg
@@ -20,7 +20,7 @@
 #   ./install.sh --run-configure                # also run configure.sh at the end
 #
 # One-time setup of the encrypted passkey (on any box that already has the
-# plaintext key at ~/.config/foldingathome/passkey):
+# plaintext key):
 #   gpg --batch --yes --pinentry-mode loopback --passphrase '<your passphrase>' \\
 #       --symmetric --cipher-algo AES256 \\
 #       -o scripts/folding/passkey.gpg ~/.config/foldingathome/passkey
@@ -28,17 +28,8 @@
 set -euo pipefail
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-TMP_BUILD="$(mktemp -d -t foldingathome-build.XXXXXXXX)"
-PKG_BUILT=""
 
-cleanup() {
-    if [[ -n "${PKG_BUILT}" && -e "${PKG_BUILT}" ]]; then
-        rm -f "${PKG_BUILT}"
-    fi
-    rm -rf "${TMP_BUILD}"
-}
-trap cleanup EXIT
-
+# --- arg parser (shared: every per-distro installer sees the same flags) ---
 start_service=1
 passkey_arg=""
 passkey_file_arg=""
@@ -61,57 +52,67 @@ while (( $# > 0 )); do
         --passphrase-file=*)    seed_passphrase_file="${1#--passphrase-file=}"; shift ;;
         --run-configure)        run_configure=1; shift ;;
         -h|--help)
-            sed -n '2,32p' "${BASH_SOURCE[0]}" | sed 's/^# *//'
+            sed -n '2,27p' "${BASH_SOURCE[0]}" | sed 's/^# *//'
             exit 0
             ;;
         *) echo "Unknown arg: ${1}" >&2; exit 2 ;;
     esac
 done
 
+# --- preflight: not root, sudo + gpg (if --seed-passkey) available ---
 if [[ $EUID -eq 0 ]]; then
     echo "Do not run as root; the script will sudo when it needs to." >&2
     exit 1
 fi
-if ! command -v makepkg >/dev/null 2>&1; then
-    echo "makepkg not found. Install base-devel first:  sudo pacman -S --needed base-devel" >&2
+if ! command -v sudo >/dev/null 2>&1; then
+    echo "sudo not found; this script expects a sudo-capable user." >&2
     exit 1
 fi
-if ! command -v git >/dev/null 2>&1; then
-    echo "git not found. Install it first:  sudo pacman -S --needed git" >&2
+if (( seed_passkey )) && ! command -v gpg >/dev/null 2>&1; then
+    echo "gpg not found; install it (e.g. 'sudo pacman -S gnupg' or 'sudo apt install gnupg')." >&2
     exit 1
 fi
 
 # --- pre-create the per-user config dir early so --passkey works even if
-# the build below fails. Folding a mkdir under $HOME is safe. ---
+# the install below fails. Folding a mkdir under $HOME is safe. ---
 CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/foldingathome"
 PASSKEY_FILE="${CONFIG_DIR}/passkey"
 mkdir -p "${CONFIG_DIR}"
 chmod 700 "${CONFIG_DIR}"
 
-echo ">>> Cloning foldingathome from AUR"
-git clone --depth 1 https://aur.archlinux.org/foldingathome.git "${TMP_BUILD}/foldingathome"
-cd "${TMP_BUILD}/foldingathome"
+# --- distro detection: pick the per-distro installer ---
+if [[ -r /etc/os-release ]]; then
+    . /etc/os-release
+fi
+DISTRO_ID="${ID:-unknown}"
+DISTRO_INSTALLER=""
+case "${DISTRO_ID}" in
+    cachyos|arch|archarm|manjaro|endeavouros|garuda|artix)
+        DISTRO_INSTALLER="${SCRIPT_DIR}/install-arch.sh"
+        DISTRO_LABEL="Arch / CachyOS"
+        ;;
+    ubuntu|debian|linuxmint|pop|elementary|zorin|kubuntu|edubuntu|neon)
+        DISTRO_INSTALLER="${SCRIPT_DIR}/install-ubuntu.sh"
+        DISTRO_LABEL="Ubuntu / Debian"
+        ;;
+    *)
+        echo "Unsupported distro: ${DISTRO_ID:-unknown} (PRETTY_NAME='${PRETTY_NAME:-}')." >&2
+        echo "Supported families: Arch / CachyOS (install-arch.sh) and Ubuntu / Debian (install-ubuntu.sh)." >&2
+        echo "You can run one of those scripts directly if you know what you're doing." >&2
+        exit 1
+        ;;
+esac
 
-echo ">>> Building package (this takes 3-10 minutes — scons compiles a lot)"
-makepkg -s --noconfirm
-
-# pick the .pkg.tar.* that makepkg just produced
-shopt -s nullglob
-PKG_FILES=(*.pkg.tar.*)
-shopt -u nullglob
-if (( ${#PKG_FILES[@]} == 0 )); then
-    echo "makepkg did not produce a package; check the output above." >&2
+if [[ ! -r "${DISTRO_INSTALLER}" ]]; then
+    echo "Per-distro installer not found: ${DISTRO_INSTALLER}" >&2
     exit 1
 fi
-PKG_BUILT="${TMP_BUILD}/foldingathome/${PKG_FILES[0]}"
 
-echo ">>> Installing with pacman"
-sudo pacman -U --noconfirm "${PKG_BUILT}"
-
-echo
-echo "Installed:"
-pacman -Q foldingathome
-which fah-client
+echo ">>> Detected ${DISTRO_LABEL} (id=${DISTRO_ID})"
+echo ">>> Running ${DISTRO_INSTALLER##*/}"
+# Source the installer so it shares our env. Each installer uses
+# `return 1` on failure so the error propagates back to us.
+. "${DISTRO_INSTALLER}"
 
 # --- write the passkey, if one was provided ---
 passkey_written=0

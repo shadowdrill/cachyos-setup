@@ -1,18 +1,29 @@
 # Folding@home — handoff and runbook
 
-This document covers the cachyos-setup folding@home module: install, configure, run, monitor, and troubleshoot the `fah-client` AUR package on a CachyOS / Arch box. The repo is set up to fold for **team 223518 (Linus Tech Tips)** on every machine that checks it out.
+This document covers the cachyos-setup folding@home module: install, configure, run, monitor, and troubleshoot the `fah-client` client on a CachyOS / Arch or Ubuntu 24 box. The repo is set up to fold for **team 223518 (Linus Tech Tips)** on every machine that checks it out.
 
 ## 1. What the module does
 
-The scripts in `scripts/folding/` turn a fresh CachyOS box into a folding@home client in three steps:
+The scripts in `scripts/folding/` turn a fresh box into a folding@home client in three steps:
 
 | Step | Script | What it does |
 |---|---|---|
-| 1 | `install.sh` | clones the `foldingathome` AUR package, builds it, installs it, enables and starts `fah-client.service` |
+| 1 | `install.sh` | detects the distro via `/etc/os-release` and dispatches to `install-arch.sh` (AUR build) or `install-ubuntu.sh` (downloads the official `.deb`); enables and starts `fah-client.service` |
 | 2 | (key) | the 32-hex FAH passkey is decrypted from a GPG-encrypted `passkey.gpg` (committed) into `~/.config/foldingathome/passkey` (chmod 600) |
 | 3 | `configure.sh` | reads the passkey + this machine's hostname, writes `/etc/fah-client/config.xml` with team=223518, user=`<hostname>-folding`, GPU auto-detection, and restarts the service |
 
 After that, `status.sh` gives a one-screen overview at any time, and the FAHClient web control panel is reachable on `http://localhost:7396/`.
+
+## 1.1 Supported distros
+
+| Distro family | Installer | Package source | fah-client version |
+|---|---|---|---|
+| CachyOS, Arch, Manjaro, EndeavourOS, Garuda, Artix | `install-arch.sh` | AUR `foldingathome` (built from source) | 8.5.x (bastet branch) |
+| Ubuntu 22.04+, Debian 12+, Linux Mint, Pop!_OS, elementary, Zorin, KDE Neon | `install-ubuntu.sh` | official `.deb` from `download.foldingathome.org` (stable line) | 8.1.x |
+
+Both paths produce the same binary, service, user, and config layout on disk, so `configure.sh`, `status.sh`, and `seed-passkey.sh` are distro-agnostic.
+
+> **Version mismatch:** the AUR is on the newer 8.5.x line (cutting-edge bastet); the official `.deb` is on 8.1.x (older stable). Both fold, but feature parity is not 1:1. If you need 8.5.x on Ubuntu, build `fah-client-bastet` from source — out of scope for this module.
 
 ## 2. The 30-second version
 
@@ -150,6 +161,35 @@ Points are credited when the WU **server-side** return is accepted, not when the
 ### 8.4 Mac RDP crash still happening
 
 (folding module unrelated — see `docs/rdp/RDP-HANDOFF.md` §3.8.)
+
+### 8.5 `install.sh: unsupported distro` on a known-good box
+
+The dispatcher only matches the IDs listed in §1.1. If your distro is on the list but you still get the error:
+
+```bash
+cat /etc/os-release | grep ^ID=
+```
+
+The match is against `ID=` only; `ID_LIKE=` is ignored. If your distro has a different `ID=` (e.g. `linuxmint` was renamed to `mint`), add it to the case statement in `install.sh`. Common ones already covered: `ubuntu`, `debian`, `linuxmint`, `pop`, `elementary`, `zorin`, `kubuntu`, `edubuntu`, `neon` (Ubuntu derivatives) and `cachyos`, `arch`, `archarm`, `manjaro`, `endeavouros`, `garuda`, `artix` (Arch derivatives).
+
+### 8.6 Ubuntu install: `dpkg: error processing package fah-client`
+
+If `apt install ./fah-client.deb` reports a missing dependency, run:
+
+```bash
+sudo apt --fix-broken install
+```
+
+and re-run `./install.sh`. The script uses `apt install ./file.deb` instead of raw `dpkg -i` precisely so apt auto-fetches the deps from the configured Ubuntu repos; if your apt sources are misconfigured (e.g. you removed the `universe` component on a minimal install), the auto-fetch will fail. Re-enable `universe` first:
+
+```bash
+sudo add-apt-repository universe
+sudo apt update
+```
+
+### 8.7 `passkey.gpg` was committed by accident with the wrong passphrase
+
+Re-encrypt with the correct passphrase (or with a new key from <https://apps.foldingathome.org/passkey>) and `git commit --amend`. If the file is already in a remote (e.g. GitHub), the previous ciphertext is recoverable from the git history — rotate the FAH passkey itself in that case.
 
 ## 9. Per-machine list
 

@@ -1,6 +1,19 @@
 # folding@home module
 
-CachyOS-side scripts for joining the [Linus Tech Tips folding@home team](https://apps.foldingathome.org/team/223518) (id **223518**) on every box that has this repo checked out. Each machine folds independently under the same passkey, with a unique per-machine username, so points track per-machine in the LTT team ranking.
+Scripts for joining the [Linus Tech Tips folding@home team](https://apps.foldingathome.org/team/223518) (id **223518**) on every box that has this repo checked out. Each machine folds independently under the same passkey, with a unique per-machine username, so points track per-machine in the LTT team ranking.
+
+## Supported distros
+
+`install.sh` auto-detects the distro via `/etc/os-release` and dispatches to the right per-distro installer:
+
+| Distro | Installer | How fah-client is packaged |
+|---|---|---|
+| CachyOS, Arch, Manjaro, EndeavourOS, Garuda, Artix | `install-arch.sh` | AUR `foldingathome` package (8.5.x), built from source via `makepkg` |
+| Ubuntu 22.04+, Debian 12+, Linux Mint, Pop!_OS, elementary, Zorin, KDE Neon | `install-ubuntu.sh` | official `.deb` from <https://download.foldingathome.org/releases/public/fah-client/> (stable line, 8.1.x) |
+
+The rest of the module (`configure.sh`, `status.sh`, `seed-passkey.sh`) is distro-agnostic — the upstream fah-client package, service, and config paths are the same on both.
+
+> **Version note:** the AUR package is on FAH's 8.5.x line (bastet branch), the official `.deb` is on the 8.1.x stable line. Both fold. If you specifically want 8.5.x on Ubuntu, build `fah-client-bastet` from source — out of scope for this module.
 
 ## One-time per machine
 
@@ -76,10 +89,14 @@ the passkey itself, get a new one from
 
 | Path | Purpose | Committed? |
 |---|---|---|
-| `install.sh` | build + install from AUR | yes |
-| `configure.sh` | write `/etc/fah-client/config.xml` | yes |
-| `status.sh` | one-screen service + WU summary | yes |
-| `passkey` (example below) | template only | yes (template) |
+| `install.sh` | dispatcher: detects distro, sources the right per-distro installer, runs shared post-install | yes |
+| `install-arch.sh` | AUR build path (CachyOS / Arch family) | yes |
+| `install-ubuntu.sh` | apt path (Ubuntu / Debian family); downloads official `.deb` from Folding@home | yes |
+| `configure.sh` | write `/etc/fah-client/config.xml` (distro-agnostic) | yes |
+| `seed-passkey.sh` | decrypt `passkey.gpg` to `~/.config/foldingathome/passkey` (distro-agnostic) | yes |
+| `status.sh` | one-screen service + WU summary (distro-agnostic) | yes |
+| `passkey.example` | template only | yes |
+| `passkey.gpg` | GPG-symmetric-encrypted passkey, committed | yes (if you create it; see §11) |
 | `~/.config/foldingathome/passkey` | real 32-hex passkey | **no — gitignored** |
 | `/etc/fah-client/config.xml` | live FAHClient config | managed by the system, not in this repo |
 

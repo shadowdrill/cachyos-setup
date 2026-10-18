@@ -12,7 +12,8 @@ This file records what was installed, when, and on which machines. It is the "as
 | GPU detection | `nvidia-smi` if present → one GPU slot per device |
 | Config location | `/etc/fah-client/config.xml` (managed by `scripts/folding/configure.sh`) |
 | Passkey location | `~/.config/foldingathome/passkey` (chmod 600, **gitignored**) |
-| AUR package | `foldingathome` 1:8.5.6-1 (built from source by `install.sh`) |
+| Supported distros | CachyOS / Arch (AUR `foldingathome` 1:8.5.6-1); Ubuntu 22.04+ / Debian 12+ (official `.deb` 8.1.x) |
+| Install dispatcher | `install.sh` → `install-arch.sh` OR `install-ubuntu.sh` (chosen by `/etc/os-release`) |
 | Service | `fah-client.service` (system, not user) |
 | Web UI | `http://localhost:7396/` (forward with `ssh -L 7396:localhost:7396 …`) |
 
@@ -69,6 +70,7 @@ Fallbacks if `passkey.gpg` isn't (yet) in the repo:
 
 | Date | Change | Why |
 |---|---|---|
+| 2026-10-18 | split install into a dispatcher (`install.sh`) + per-distro installers (`install-arch.sh`, `install-ubuntu.sh`); same shared flags (`--passkey`, `--passkey-file`, `--seed-passkey`, `--from`, `--passphrase-file`, `--no-start`, `--run-configure`); Ubuntu 22.04+ / Debian 12+ support added (downloads official `.deb` from `download.foldingathome.org`); `README.md`, `HANDOFF.md` (new §1.1 distro table, §8.5/§8.6/§8.7 troubleshooting) and `SETUP.md` updated; `FAH_TEST_OS_RELEASE` env var added to `install-ubuntu.sh` to allow smoke-testing the Ubuntu path on non-Ubuntu boxes | first Ubuntu 24 install request; needed the same one-shot UX as the existing CachyOS path |
 | 2026-10-18 | added `seed-passkey.sh`; `install.sh` and `configure.sh` now both support `--seed-passkey` / `--from <path>` / `--passphrase-file <path>`; `configure.sh` auto-decrypts `passkey.gpg` as a fallback; `README.md`, `HANDOFF.md` (new §11) and `SETUP.md` updated | keep the FAH passkey out of shell history / unencrypted files / accidental commits, while still letting the repo roll out to a whole fleet with one `./install.sh` command |
 | 2026-10-18 | cachyos-taichi now actively folding (PID 20589); `config.xml` populated with team 223518, user `cachyos-taichi-folding`, 1 CPU + 1 GPU slot | first production install of the module |
 | 2026-10-18 | `install.sh` now pre-creates `~/.config/foldingathome/` (mode 700) and accepts `--passkey <32hex>` / `--passkey-file <path>` / `--run-configure`; doc updates in `README.md` and `HANDOFF.md` | make install a one-shot when a passkey is already available, instead of a 3-step dance |

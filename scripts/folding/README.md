@@ -7,10 +7,15 @@ CachyOS-side scripts for joining the [Linus Tech Tips folding@home team](https:/
 ```bash
 cd scripts/folding
 
-# 1. Install the FAHClient package from the AUR (needs sudo; builds from source, ~3-10 min)
-./install.sh
+# 1. Install the FAHClient package from the AUR (needs sudo; builds from source, ~3-10 min).
+#    Pass --passkey to seed the per-user key at the same time, or --run-configure
+#    to chain the configure step too.
+./install.sh [--passkey <32hex> | --passkey-file <path>] [--run-configure]
 
-# 2. Get a passkey at https://apps.foldingathome.org/passkey (one per user, valid on every machine)
+# 2. If you didn't pass --passkey in step 1: get one at
+#    https://apps.foldingathome.org/passkey (one per user, valid on every machine)
+#    and drop it in ~/.config/foldingathome/passkey (the dir is mode 700, the file
+#    must be mode 600).
 mkdir -p ~/.config/foldingathome && chmod 700 ~/.config/foldingathome
 umask 077
 ${EDITOR:-nano} ~/.config/foldingathome/passkey     # paste the 32-hex passkey, save

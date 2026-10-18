@@ -18,6 +18,14 @@ After that, `status.sh` gives a one-screen overview at any time, and the FAHClie
 
 ```bash
 cd scripts/folding
+./install.sh --passkey "$(cat ~/.config/foldingathome/passkey 2>/dev/null || echo GET-ONE-FIRST)" --run-configure
+./status.sh
+```
+
+If you don't have a passkey file yet, the short form is:
+
+```bash
+cd scripts/folding
 ./install.sh                                                     # 3-10 min build
 mkdir -p ~/.config/foldingathome && chmod 700 ~/.config/foldingathome
 umask 077 && ${EDITOR:-nano} ~/.config/foldingathome/passkey      # paste passkey

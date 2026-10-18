@@ -1,5 +1,7 @@
 src/
 pkg/
-krdp/                # bare mirror of upstream, created by makepkg
+# bare mirror of upstream, created by makepkg (do not add trailing space after dir name,
+# or git treats it as a non-matching pattern)
+krdp/
 *.pkg.tar.zst
 makepkg.log

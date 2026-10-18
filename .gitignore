@@ -5,3 +5,11 @@ __pycache__/
 # Folding@home: real per-machine passkey file (32 hex chars; never commit)
 .folding-passkey
 scripts/folding/passkey
+
+# rdp: makepkg's bare upstream git mirror (3.5 MB of objects). Listed at the
+# root so a stray 'git add -A' from anywhere in the tree cannot sweep it in.
+**/krdp-build/krdp/
+**/krdp-build/pkg/
+**/krdp-build/src/
+**/krdp-build/*.pkg.tar.zst
+**/krdp-build/makepkg.log

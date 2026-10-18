@@ -1,3 +1,7 @@
 .venv/
 __pycache__/
 .idea/
+
+# Folding@home: real per-machine passkey file (32 hex chars; never commit)
+.folding-passkey
+scripts/folding/passkey
